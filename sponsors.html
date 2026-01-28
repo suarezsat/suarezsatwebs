@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patrocinadores | SuarezSat</title>
+    <link rel="icon" type="image/png" href="assets/media/brand/suarezsat-dark-white.png">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container nav">
+            <a class="logo" href="index.html">
+                <svg viewBox="0 0 64 64" role="img" aria-hidden="true">
+                    <path d="M32 4C23 10 18 20 18 32s5 22 14 28c9-6 14-16 14-28S41 10 32 4z" fill="#00acc1"/>
+                    <path d="M28 44h8l4 10-8-4-8 4 4-10z" fill="#ffb300"/>
+                </svg>
+                
+                <img class="logo-image" src="assets/media/brand/suarezsat-dark-white.png" alt="Logo SuarezSat" loading="lazy">
+                <span class="logo-text">SuarezSat</span>
+            </a>
+            <nav class="nav-links">
+                <a href="index.html">Inicio</a>
+                <a href="mission.html">Misión</a>
+                <a href="team.html">Equipo</a>
+                <a href="crowdfunding.html">Crowdfunding</a>
+                <a aria-current="page" href="sponsors.html">Patrocinadores</a>
+                <a href="multimedia.html">Multimedia</a>
+                <a href="contact.html">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Botón de acceso oculto -->
+        <button id="secretAccessBtn" class="secret-access-btn" aria-label="Acceso restringido">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+            </svg>
+        </button>
+
+        <!-- Modal de contraseña -->
+        <div id="passwordModal" class="password-modal">
+            <div class="password-modal-content">
+                <button class="password-modal-close" id="closeModal">&times;</button>
+                <h2>Acceso Restringido</h2>
+                <p>Ingresa la contraseña para acceder al contenido exclusivo</p>
+                <form id="passwordForm">
+                    <input type="password" id="passwordInput" placeholder="Contraseña" required autofocus>
+                    <p id="passwordError" class="password-error"></p>
+                    <button type="submit" class="btn btn-primary">Acceder</button>
+                </form>
+            </div>
+        </div>
+
+        <section class="hero container">
+            <span class="pill">Red de apoyo</span>
+            <h1>Patrocinadores SuarezSat</h1>
+            <p>
+                SuarezSat es un proyecto CanSat del IES Padre Suárez que necesita financiación para diseñar, construir y lanzar
+                un satélite en miniatura a 1100 metros de altura. Descubre quiénes nos acompañan y cómo puedes sumarte.
+            </p>
+            <div class="cta-group">
+                <a class="btn btn-primary" href="mailto:suarezsatinfo@gmail.com?subject=Quiero%20colaborar%20con%20SuarezSat">Quiero patrocinar</a>
+                <a class="btn btn-secondary" href="#convocatoria">Cómo patrocinar</a>
+            </div>
+                    <div class="hero-decor" aria-hidden="true">
+                <div class="orbit orbit--large"></div>
+                <div class="orbit orbit--medium"></div>
+                <div class="orbit orbit--small"></div>
+                <div class="satellite"></div>
+                <div class="signal"></div>
+            </div>
+</section>
+
+        <section class="container section-light">
+            <h2>Beneficios para patrocinadores</h2>
+            <div class="grid grid-2">
+                <div class="card">
+                    <h3>Visibilidad de marca</h3>
+                    <p>
+                        Da a conocer tu nombre y logotipo a un público amplio y específico.
+                    </p>
+                </div>
+                <div class="card">
+                    <h3>Imagen y reputación</h3>
+                    <p>
+                        Asociarte con una causa educativa y científica fortalece la percepción de tu marca.
+                    </p>
+                </div>
+                <div class="card">
+                    <h3>Acceso a nuevos públicos</h3>
+                    <p>
+                        Llega a clientes potenciales y comunidades educativas a las que no se alcanza con otros medios.
+                    </p>
+                </div>
+                <div class="card">
+                    <h3>Diferenciación</h3>
+                    <p>
+                        Destaca frente a la competencia al vincular tu marca con innovación y talento local.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="convocatoria" class="container section-light">
+            <h2>Cómo puedes patrocinar</h2>
+            <div class="grid grid-2">
+                <div class="card">
+                    <h3>Qué necesitamos</h3>
+                    <p>
+                        Financiación para componentes, diseño de la lata, pruebas del proyecto y participación en el concurso CanSat.
+                    </p>
+                </div>
+                <div class="card">
+                    <h3>Cómo participar</h3>
+                    <ol>
+                        <li>Escríbenos a <a href="mailto:suarezsatinfo@gmail.com">suarezsatinfo@gmail.com</a> indicando tu propuesta.</li>
+                        <li>Concertaremos una reunión (presencial o virtual) para alinear objetivos.</li>
+                        <li>Firmaremos un acuerdo de colaboración adaptado a tus intereses.</li>
+                    </ol>
+                </div>
+                <div class="card">
+                    <h3>Alcance del proyecto</h3>
+                    <p>
+                        Participamos a nivel regional y aspiramos a clasificarnos para la fase nacional, dando visibilidad a nuestros patrocinadores.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="container section-light">
+            <h2>Etapas de construcción</h2>
+            <div class="timeline">
+                <article class="timeline-item">
+                    <h3>1 · Diseño de la IA</h3>
+                    <p>Definimos el funcionamiento de la IA y la preparamos para la misión secundaria.</p>
+                </article>
+                <article class="timeline-item">
+                    <h3>2 · Diseño de la lata</h3>
+                    <p>Adaptamos la estructura del CanSat a las necesidades de la misión.</p>
+                </article>
+                <article class="timeline-item">
+                    <h3>3 · Pruebas del proyecto</h3>
+                    <p>Verificamos el sistema completo y corregimos posibles errores.</p>
+                </article>
+                <article class="timeline-item">
+                    <h3>4 · Concurso</h3>
+                    <p>Presentamos el proyecto y mostramos resultados y aprendizajes.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Aliados actuales al final -->
+        <section class="container section-light">
+            <h2>Patrocinadores actuales</h2>
+            <p>
+                Agradecemos el apoyo de quienes ya han apostado por SuarezSat. Su ayuda nos permite seguir avanzando.
+            </p>
+            <div class="sponsor-logo-grid">
+                <div class="sponsor-logo-card">
+                    <div class="sponsor-logo-surface">
+                        <img src="assets/media/sponsors/rayo-eneas.png" alt="Rayo Eneas">
+                    </div>
+                    <p>Equipo de fútbol local que aportó el primer impulso al proyecto.</p>
+                </div>
+                <div class="sponsor-logo-card">
+                    <div class="sponsor-logo-surface">
+                        <img src="assets/media/sponsors/erre-que-erre.png" alt="Erre Que Erre Publicidad">
+                    </div>
+                    <p>Apoyo en el logotipo y donativo clave para seguir avanzando.</p>
+                </div>
+                <div class="sponsor-logo-card">
+                    <div class="sponsor-logo-surface">
+                        <img src="assets/media/sponsors/la-rezeta.png" alt="Gastrobar La Rezeta">
+                    </div>
+                    <p>Colaboración local que nos ayuda a continuar con el proyecto.</p>
+                </div>
+                <div class="sponsor-logo-card">
+                    <div class="sponsor-logo-surface">
+                        <div class="sponsor-placeholder" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <p>Próximo patrocinador</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-grid">
+            <div>
+                <h4 class="footer-title">Contactos clave</h4>
+                <p>Patrocinios: <a href="mailto:suarezsatinfo@gmail.com">suarezsatinfo@gmail.com</a></p>
+                <p>Donaciones: <a href="mailto:suarezsatinfo@gmail.com">suarezsatinfo@gmail.com</a></p>
+            </div>
+            <div>
+                <h4 class="footer-title">Recursos</h4>
+                <p><a href="crowdfunding.html">Plan de crowdfunding</a></p>
+                <p><a href="mission.html">Resumen de misión</a></p>
+                <p><a href="team.html">Equipo técnico</a></p>
+            </div>
+            <div>
+                <h4 class="footer-title">Síguenos</h4>
+                <div class="social-links">
+                    <a href="#" aria-label="Instagram SuarezSat">IG</a>
+                    <a href="#" aria-label="Twitter SuarezSat">TW</a>
+                    <a href="#" aria-label="YouTube SuarezSat">YT</a>
+                </div>
+            </div>
+        </div>
+        <div class="divider container"></div>
+        <div class="container">
+            <p>&copy; <span id="year"></span> SuarezSat · IES Padre Suárez.</p>
+        </div>
+    </footer>
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+        const logopropio = "";
+        const logoLink = document.querySelector("header .logo");
+        const logoImage = logoLink ? logoLink.querySelector(".logo-image") : null;
+        if (logopropio && logoLink && logoImage) {
+            logoLink.classList.add("logo--custom");
+            logoImage.src = logopropio;
+            logoImage.alt = "Logo SuarezSat";
+        }
+
+
+        // Funcionalidad del acceso oculto
+        const secretAccessBtn = document.getElementById("secretAccessBtn");
+        const passwordModal = document.getElementById("passwordModal");
+        const closeModal = document.getElementById("closeModal");
+        const passwordForm = document.getElementById("passwordForm");
+        const passwordInput = document.getElementById("passwordInput");
+        const passwordError = document.getElementById("passwordError");
+
+        // Contraseña (cambia esto por la contraseña que desees)
+        const CORRECT_PASSWORD = "suarezsat2025";
+
+        // Abrir modal
+        secretAccessBtn.addEventListener("click", () => {
+            passwordModal.style.display = "flex";
+            passwordInput.focus();
+        });
+
+        // Cerrar modal
+        closeModal.addEventListener("click", () => {
+            passwordModal.style.display = "none";
+            passwordInput.value = "";
+            passwordError.textContent = "";
+        });
+
+        // Cerrar modal al hacer clic fuera
+        passwordModal.addEventListener("click", (e) => {
+            if (e.target === passwordModal) {
+                passwordModal.style.display = "none";
+                passwordInput.value = "";
+                passwordError.textContent = "";
+            }
+        });
+
+        // Validar contraseña y redirigir a página exclusiva
+        passwordForm.addEventListener("submit", (e) => {
+            e.preventDefault();
+            const enteredPassword = passwordInput.value;
+
+            if (enteredPassword === CORRECT_PASSWORD) {
+                // Guardar autenticación en sessionStorage
+                sessionStorage.setItem("sponsorsAuth", "true");
+                // Redirigir a la página exclusiva
+                window.location.href = "sponsors-exclusive.html";
+            } else {
+                passwordError.textContent = "Contraseña incorrecta. Inténtalo de nuevo.";
+                passwordInput.value = "";
+                passwordInput.focus();
+            }
+        });
+
+        // Cerrar con Escape
+        document.addEventListener("keydown", (e) => {
+            if (e.key === "Escape" && passwordModal.style.display === "flex") {
+                passwordModal.style.display = "none";
+                passwordInput.value = "";
+                passwordError.textContent = "";
+            }
+        });
+    </script>
+</body>
+</html>
+

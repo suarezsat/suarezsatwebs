@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área Exclusiva Patrocinadores | SuarezSat</title>
+    <link rel="icon" type="image/png" href="assets/media/brand/suarezsat-dark-white.png">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Pantalla de verificación de contraseña -->
+    <div id="passwordCheck" class="password-check-overlay">
+        <div class="password-check-modal">
+            <h2>Acceso Restringido</h2>
+            <p>Esta página es exclusiva para patrocinadores autorizados</p>
+            <form id="passwordCheckForm">
+                <input type="password" id="passwordCheckInput" placeholder="Ingresa la contraseña" required autofocus>
+                <p id="passwordCheckError" class="password-error"></p>
+                <button type="submit" class="btn btn-primary">Acceder</button>
+            </form>
+            <a href="sponsors.html" class="back-link">← Volver a Patrocinadores</a>
+        </div>
+    </div>
+
+    <!-- Contenido de la página (oculto hasta verificar contraseña) -->
+    <div id="pageContent" style="display: none;">
+        <header>
+            <div class="container nav">
+                <a class="logo" href="index.html">
+                    <svg viewBox="0 0 64 64" role="img" aria-hidden="true">
+                        <path d="M32 4C23 10 18 20 18 32s5 22 14 28c9-6 14-16 14-28S41 10 32 4z" fill="#00acc1"/>
+                        <path d="M28 44h8l4 10-8-4-8 4 4-10z" fill="#ffb300"/>
+                    </svg>
+                    
+                <img class="logo-image" src="assets/media/brand/suarezsat-dark-white.png" alt="Logo SuarezSat" loading="lazy">
+                <span class="logo-text">SuarezSat</span>
+                </a>
+                <nav class="nav-links">
+                    <a href="index.html">Inicio</a>
+                    <a href="mission.html">Misión</a>
+                    <a href="team.html">Equipo</a>
+                    <a href="crowdfunding.html">Crowdfunding</a>
+                    <a href="sponsors.html">Patrocinadores</a>
+                    <a href="multimedia.html">Multimedia</a>
+                    <a href="contact.html">Contacto</a>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <section class="hero container">
+                <span class="pill">Área Exclusiva</span>
+                <h1>Dossier privado para patrocinadores</h1>
+                <p>
+                    Bienvenido al área exclusiva de SuarezSat. Aquí encontrarás el dossier y materiales preparados para nuestros patrocinadores.
+                </p>
+                        <div class="hero-decor" aria-hidden="true">
+                <div class="orbit orbit--large"></div>
+                <div class="orbit orbit--medium"></div>
+                <div class="orbit orbit--small"></div>
+                <div class="satellite"></div>
+                <div class="signal"></div>
+            </div>
+</section>
+
+            <!-- Video Exclusivo -->
+            <section class="container section-light">
+                <h2>Video exclusivo para patrocinadores</h2>
+                <p>
+                    Este video estará disponible próximamente con material preparado para patrocinadores.
+                </p>
+                <div class="exclusive-video-container">
+                    <div class="video-wrapper">
+                        <div class="video-placeholder-large">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                            <p>Video para patrocinadores (próximamente)</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Presentación -->
+            <section class="container section-light">
+                <h2>Dossier para patrocinadores</h2>
+                <p>
+                    Descarga el dossier completo con los detalles del proyecto CanSat.
+                </p>
+                <div class="presentation-container">
+                    <div class="presentation-wrapper">
+                        <div class="presentation-placeholder">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
+                            </svg>
+                            <p>Dossier SuarezSat</p>
+                            <a href="presentacion/dossier-suarezsat.pdf" class="btn btn-primary" download>Descargar dossier</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="container section-light">
+                <h2>Logos oficiales</h2>
+                <p>
+                    Recursos gráficos para comunicación y difusión del proyecto.
+                </p>
+                <div class="sponsor-logo-grid">
+                    <div class="sponsor-logo-card">
+                        <div class="sponsor-logo-surface">
+                            <img src="assets/media/brand/suarezsat-dark-white.png" alt="Logo SuarezSat fondo oscuro">
+                        </div>
+                        <a class="btn btn-secondary" href="assets/media/brand/suarezsat-dark-white.png" download>Descargar logo oscuro</a>
+                    </div>
+                    <div class="sponsor-logo-card">
+                        <div class="sponsor-logo-surface">
+                            <img src="assets/media/brand/suarezsat-light.jpg" alt="Logo SuarezSat fondo claro">
+                        </div>
+                        <a class="btn btn-secondary" href="assets/media/brand/suarezsat-light.jpg" download>Descargar logo claro</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="container footer-grid">
+                <div>
+                    <h4 class="footer-title">Contactos clave</h4>
+                    <p>Patrocinios: <a href="mailto:suarezsatinfo@gmail.com">suarezsatinfo@gmail.com</a></p>
+                    <p>Donaciones: <a href="mailto:suarezsatinfo@gmail.com">suarezsatinfo@gmail.com</a></p>
+                </div>
+                <div>
+                    <h4 class="footer-title">Recursos</h4>
+                    <p><a href="crowdfunding.html">Plan de crowdfunding</a></p>
+                    <p><a href="mission.html">Resumen de misión</a></p>
+                    <p><a href="team.html">Equipo técnico</a></p>
+                </div>
+                <div>
+                    <h4 class="footer-title">Síguenos</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram SuarezSat">IG</a>
+                        <a href="#" aria-label="Twitter SuarezSat">TW</a>
+                        <a href="#" aria-label="YouTube SuarezSat">YT</a>
+                    </div>
+                </div>
+            </div>
+            <div class="divider container"></div>
+            <div class="container">
+                <p>&copy; <span id="year"></span> SuarezSat · IES Padre Suárez.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+        const logopropio = "";
+        const logoLink = document.querySelector("header .logo");
+        const logoImage = logoLink ? logoLink.querySelector(".logo-image") : null;
+        if (logopropio && logoLink && logoImage) {
+            logoLink.classList.add("logo--custom");
+            logoImage.src = logopropio;
+            logoImage.alt = "Logo SuarezSat";
+        }
+
+
+        // Verificación de contraseña
+        const CORRECT_PASSWORD = "suarezsat2025";
+        const passwordCheck = document.getElementById("passwordCheck");
+        const pageContent = document.getElementById("pageContent");
+        const passwordCheckForm = document.getElementById("passwordCheckForm");
+        const passwordCheckInput = document.getElementById("passwordCheckInput");
+        const passwordCheckError = document.getElementById("passwordCheckError");
+
+        // Verificar si ya está autenticado (sessionStorage)
+        if (sessionStorage.getItem("sponsorsAuth") === "true") {
+            passwordCheck.style.display = "none";
+            pageContent.style.display = "block";
+        } else {
+            passwordCheck.style.display = "flex";
+            pageContent.style.display = "none";
+        }
+
+        // Validar contraseña
+        passwordCheckForm.addEventListener("submit", (e) => {
+            e.preventDefault();
+            const enteredPassword = passwordCheckInput.value;
+
+            if (enteredPassword === CORRECT_PASSWORD) {
+                // Guardar autenticación en sessionStorage
+                sessionStorage.setItem("sponsorsAuth", "true");
+                passwordCheck.style.display = "none";
+                pageContent.style.display = "block";
+            } else {
+                passwordCheckError.textContent = "Contraseña incorrecta. Inténtalo de nuevo.";
+                passwordCheckInput.value = "";
+                passwordCheckInput.focus();
+            }
+        });
+    </script>
+</body>
+</html>
+

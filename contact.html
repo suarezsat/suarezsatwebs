@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | SuarezSat</title>
+    <link rel="icon" type="image/png" href="assets/media/brand/suarezsat-dark-white.png">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container nav">
+            <a class="logo" href="index.html">
+                <svg viewBox="0 0 64 64" role="img" aria-hidden="true">
+                    <path d="M32 4C23 10 18 20 18 32s5 22 14 28c9-6 14-16 14-28S41 10 32 4z" fill="#00acc1"/>
+                    <circle cx="32" cy="26" r="6" fill="#0d0f1a"/>
+                </svg>
+                
+                <img class="logo-image" src="assets/media/brand/suarezsat-dark-white.png" alt="Logo SuarezSat" loading="lazy">
+                <span class="logo-text">SuarezSat</span>
+            </a>
+            <nav class="nav-links">
+                <a href="index.html">Inicio</a>
+                <a href="mission.html">Misión</a>
+                <a href="team.html">Equipo</a>
+                <a href="crowdfunding.html">Crowdfunding</a>
+                <a href="sponsors.html">Patrocinadores</a>
+                <a href="multimedia.html">Multimedia</a>
+                <a aria-current="page" href="contact.html">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero container">
+            <span class="pill">Contáctanos</span>
+            <h1>Estamos encantados de resolver tus dudas</h1>
+            <p>
+                Escríbenos para conocer más sobre el proyecto, colaborar con SuarezSat o ayudar en la financiación del CanSat.
+                Respondemos en menos de 48 horas lectivas.
+            </p>
+                    <div class="hero-decor" aria-hidden="true">
+                <div class="orbit orbit--large"></div>
+                <div class="orbit orbit--medium"></div>
+                <div class="orbit orbit--small"></div>
+                <div class="satellite"></div>
+                <div class="signal"></div>
+            </div>
+</section>
+
+        <section class="container section-light">
+            <h2>Correos directos</h2>
+            <div class="contact-options">
+                <div class="contact-option">
+                    <h3>Dudas generales</h3>
+                    <p>Escríbenos a <a href="mailto:suarezsatinfo@gmail.com">suarezsatinfo@gmail.com</a> para información sobre el proyecto.</p>
+                </div>
+                <div class="contact-option">
+                    <h3>Contacto del dossier</h3>
+                    <p>Correo general: <a href="mailto:suarezsatinfo@gmail.com">suarezsatinfo@gmail.com</a>.</p>
+                </div>
+                <div class="contact-option">
+                    <h3>Preguntas técnicas</h3>
+                    <p>El equipo de ingeniería responde en <a href="mailto:suarezsatinfo@gmail.com">suarezsatinfo@gmail.com</a>.</p>
+                </div>
+                <div class="contact-option">
+                    <h3>Donaciones y crowdfunding</h3>
+                    <p>Coordina tu aportación escribiendo a <a href="mailto:suarezsatinfo@gmail.com">suarezsatinfo@gmail.com</a>.</p>
+                </div>
+                <div class="contact-option">
+                    <h3>Divulgación y eventos</h3>
+                    <p>Propuestas de charlas y talleres en <a href="mailto:suarezsatinfo@gmail.com">suarezsatinfo@gmail.com</a>.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="container section-light">
+            <h2>Teléfonos y dirección</h2>
+            <div class="contact-options">
+                <div class="contact-option">
+                    <h3>Teléfonos</h3>
+                    <p>+34 686 80 45 98 · +34 688 74 05 32</p>
+                </div>
+                <div class="contact-option">
+                    <h3>Dirección</h3>
+                    <p>C. Gran Vía de Colón, 61, Centro, 18001 Granada.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="container section-light">
+            <h2>Formulario de contacto</h2>
+            <form action="https://formsubmit.co/suarezsatinfo@gmail.com" method="POST">
+                <label for="nombre">Nombre</label>
+                <input id="nombre" name="nombre" type="text" placeholder="Tu nombre y apellidos" required>
+
+                <label for="email">Correo electrónico</label>
+                <input id="email" name="email" type="email" placeholder="tuemail@ejemplo.com" required>
+
+                <label for="motivo">Motivo</label>
+                <select id="motivo" name="motivo" required>
+                    <option value="">Selecciona una opción</option>
+                    <option value="dudas">Dudas sobre la misión</option>
+                    <option value="donaciones">Donaciones y crowdfunding</option>
+                    <option value="voluntariado">Quiero ser mentor/a</option>
+                    <option value="divulgacion">Divulgación y eventos</option>
+                    <option value="otros">Otros</option>
+                </select>
+
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" name="mensaje" rows="5" placeholder="Cuéntanos en qué podemos ayudarte" required></textarea>
+
+                <input type="hidden" name="_next" value="https://suarezsat.es/gracias">
+                <input type="hidden" name="_captcha" value="false">
+
+                <button class="btn btn-primary" type="submit">Enviar mensaje</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-grid">
+            <div>
+                <h4 class="footer-title">Visítenos</h4>
+                <p>IES Padre Suárez<br>C. Gran Vía de Colón, 61<br>18001 Granada</p>
+                <p>Teléfonos: +34 686 80 45 98 · +34 688 74 05 32</p>
+            </div>
+            <div>
+                <h4 class="footer-title">Correo directo</h4>
+                <p>Dudas: <a href="mailto:suarezsatinfo@gmail.com">suarezsatinfo@gmail.com</a></p>
+                <p>Crowdfunding: <a href="mailto:suarezsatinfo@gmail.com">suarezsatinfo@gmail.com</a></p>
+                <p>Colaboradores: <a href="mailto:suarezsatinfo@gmail.com">suarezsatinfo@gmail.com</a></p>
+            </div>
+            <div>
+                <h4 class="footer-title">Síguenos</h4>
+                <div class="social-links">
+                    <a href="#" aria-label="Instagram SuarezSat">IG</a>
+                    <a href="#" aria-label="Twitter SuarezSat">TW</a>
+                    <a href="#" aria-label="YouTube SuarezSat">YT</a>
+                </div>
+            </div>
+        </div>
+        <div class="divider container"></div>
+        <div class="container">
+            <p>&copy; <span id="year"></span> SuarezSat · IES Padre Suárez.</p>
+        </div>
+    </footer>
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+        const logopropio = "";
+        const logoLink = document.querySelector("header .logo");
+        const logoImage = logoLink ? logoLink.querySelector(".logo-image") : null;
+        if (logopropio && logoLink && logoImage) {
+            logoLink.classList.add("logo--custom");
+            logoImage.src = logopropio;
+            logoImage.alt = "Logo SuarezSat";
+        }
+
+    </script>
+</body>
+</html>
+
