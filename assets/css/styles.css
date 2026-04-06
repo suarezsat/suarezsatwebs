@@ -1408,6 +1408,10 @@ textarea:focus-visible {
     object-fit: contain;
 }
 
+.sponsor-logo-card img.sponsor-logo-large {
+    max-height: 110px;
+}
+
 .sponsor-logo-card p {
     color: rgba(255, 255, 255, 0.7);
     margin: 0;
