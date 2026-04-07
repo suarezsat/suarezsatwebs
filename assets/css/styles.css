@@ -228,6 +228,21 @@ header {
     max-width: 620px;
 }
 
+.hero--finalist .hero-brand {
+    margin-top: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    animation: heroFadeUp 1.15s ease-out both;
+}
+
+.hero--finalist .hero-brand img {
+    width: min(220px, 55%);
+    height: auto;
+    filter: drop-shadow(0 14px 28px rgba(0, 0, 0, 0.35));
+    opacity: 0.96;
+}
+
 .cta-group {
     display: flex;
     justify-content: center;
@@ -1394,6 +1409,14 @@ textarea:focus-visible {
     .hero--finalist .hero-visual {
         width: min(100%, 380px);
         justify-self: center;
+    }
+
+    .hero--finalist .hero-brand {
+        justify-content: center;
+    }
+
+    .hero--finalist .hero-brand img {
+        width: min(220px, 70%);
     }
 
     .hero--finalist .launch-scene {
