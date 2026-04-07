@@ -218,10 +218,10 @@ header {
 }
 
 .hero--finalist h1 {
-    font-size: clamp(2rem, 2.55vw, 3.05rem);
-    line-height: 1.12;
+    font-size: clamp(2.35rem, 3.3vw, 3.9rem);
+    line-height: 1.08;
     letter-spacing: -0.03em;
-    max-width: 15ch;
+    max-width: 13ch;
     margin-bottom: 1.25rem;
 }
 
