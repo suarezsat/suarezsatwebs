@@ -48,25 +48,24 @@
     </header>
 
     <main>
-        <section class="hero hero--finalist container">
+        <section class="hero hero--finalist hero--second-edition container">
             <div class="hero-layout">
                 <div class="hero-copy">
-                    <span class="pill">Proyecto CanSat · IES Padre Suárez</span>
-                    <div class="finalist-banner">Finalistas en Andalucía</div>
-                    <h1>SuarezSat ya está entre los 12 mejores equipos andaluces para lanzar su CanSat en cohete</h1>
+                    <span class="pill">Segunda edición · Proyecto CanSat</span>
+                    <div class="finalist-banner">Finalistas el año pasado</div>
+                    <h1>Volvemos a despegar.<br><em>Esta vez, a por la nacional.</em></h1>
                     <p>
-                        Hemos sido seleccionados como finalistas del Desafío CanSat en Andalucía. Eso nos coloca entre los 12 equipos
-                        elegidos para vivir una fase final real de lanzamiento, donde el CanSat despega en cohete, se libera en vuelo
-                        y ejecuta su misión científica durante el descenso.
+                        En nuestra primera edición fuimos finalistas y nos quedamos muy cerca de la fase nacional. Este curso
+                        volvemos como el mismo equipo, con más experiencia, una misión más ambiciosa y todas las ganas de ganar.
                     </p>
                     <div class="hero-facts" aria-label="Datos clave del logro">
-                        <span>Top 12 Andalucía</span>
-                        <span>Lanzamiento en cohete</span>
-                        <span>Hasta alrededor de 1 km</span>
+                        <span>Edición 02</span>
+                        <span>Finalistas 2025</span>
+                        <span>Rumbo a la nacional</span>
                     </div>
                     <p class="hero-note">
-                        La final regional del programa CanSat reúne a 12 centros andaluces y reproduce una misión espacial completa:
-                        integración, lanzamiento, recuperación del satélite y presentación final de resultados al jurado.
+                        No empezamos de cero: partimos de todo lo aprendido en nuestro primer lanzamiento para construir un CanSat
+                        más sólido, más inteligente y listo para llegar más lejos.
                     </p>
                     <div class="cta-group">
                         <a class="btn btn-primary" href="crowdfunding.html">Apoya con un donativo</a>
@@ -74,31 +73,16 @@
                         <a class="btn btn-secondary" href="sponsors.html">Explora patrocinadores</a>
                     </div>
                 </div>
-                <div class="hero-visual" aria-hidden="true">
-                    <div class="launch-scene">
-                        <div class="launch-stars"></div>
-                        <div class="launch-glow"></div>
-                        <div class="launch-ring"></div>
-                        <div class="rocket-launch">
-                            <div class="rocket-body">
-                                <span class="rocket-window"></span>
-                                <span class="rocket-fin rocket-fin-left"></span>
-                                <span class="rocket-fin rocket-fin-right"></span>
-                                <span class="rocket-nose"></span>
-                            </div>
-                            <div class="rocket-flame"></div>
-                            <div class="rocket-trail"></div>
-                        </div>
-                        <div class="launch-cloud launch-cloud-1"></div>
-                        <div class="launch-cloud launch-cloud-2"></div>
-                        <div class="launch-cloud launch-cloud-3"></div>
-                        <div class="launch-status-card">
-                            <strong>Fase final</strong>
-                            <span>Despegue, misión y recuperación</span>
-                        </div>
-                        <div class="hero-brand">
-                            <img src="assets/media/brand/suarezsat-dark-white.png" alt="Logo oficial de SuarezSat" loading="lazy">
-                        </div>
+                <div class="hero-visual hero-orbit-card" aria-label="Ilustración de un CanSat descendiendo con paracaídas">
+                    <img src="assets/media/hero-second-edition.png" alt="CanSat descendiendo con paracaídas sobre una cordillera al atardecer" fetchpriority="high">
+                    <span class="orbital-dot orbital-dot--one"></span>
+                    <span class="orbital-dot orbital-dot--two"></span>
+                    <div class="launch-status-card">
+                        <strong>Objetivo 2026</strong>
+                        <span>Convertir la experiencia en vuelo</span>
+                    </div>
+                    <div class="hero-brand">
+                        <img src="assets/media/brand/suarezsat-dark-white.png" alt="Logo oficial de SuarezSat" loading="eager">
                     </div>
                 </div>
             </div>
@@ -108,6 +92,31 @@
                 <div class="orbit orbit--small"></div>
                 <div class="satellite"></div>
                 <div class="signal"></div>
+            </div>
+        </section>
+
+        <section class="container section-light edition-route reveal">
+            <div class="section-kicker">La trayectoria</div>
+            <div class="edition-route__heading">
+                <h2>Del casi al <span>vamos a por todas</span></h2>
+                <p>Un salto de edición, no de equipo. Conservamos la ambición de la primera misión y sumamos todo lo que nos enseñó.</p>
+            </div>
+            <div class="edition-steps">
+                <article class="edition-step reveal">
+                    <span class="edition-step__number">01</span>
+                    <h3>Primera edición</h3>
+                    <p>Diseñamos, probamos y defendimos nuestro CanSat hasta convertirnos en finalistas de Andalucía.</p>
+                </article>
+                <article class="edition-step edition-step--highlight reveal">
+                    <span class="edition-step__number">02</span>
+                    <h3>Muy cerca de la nacional</h3>
+                    <p>Nos quedamos a un paso, pero salimos de la experiencia con una hoja de ruta clara para mejorar.</p>
+                </article>
+                <article class="edition-step reveal">
+                    <span class="edition-step__number">03</span>
+                    <h3>Segunda edición</h3>
+                    <p>Volvemos con una misión renovada, más pruebas y un objetivo compartido: llegar y ganar.</p>
+                </article>
             </div>
         </section>
 
@@ -229,16 +238,16 @@
                 </article>
             </div>
             <div class="stats">
-                <div class="stat">
-                    <h3>1100 m</h3>
+                <div class="stat reveal">
+                    <h3 data-count="1100" data-suffix=" m">1100 m</h3>
                     <span>Altura de lanzamiento</span>
                 </div>
-                <div class="stat">
-                    <h3>2</h3>
+                <div class="stat reveal">
+                    <h3 data-count="2">2</h3>
                     <span>Misiones: primaria y secundaria</span>
                 </div>
-                <div class="stat">
-                    <h3>8</h3>
+                <div class="stat reveal">
+                    <h3 data-count="8">8</h3>
                     <span>Estudiantes en el equipo</span>
                 </div>
             </div>
@@ -287,6 +296,32 @@
             logoLink.classList.add("logo--custom");
             logoImage.src = logopropio;
             logoImage.alt = "Logo SuarezSat";
+        }
+
+        const revealItems = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.16 });
+        revealItems.forEach((item) => revealObserver.observe(item));
+
+        const orbitCard = document.querySelector('.hero-orbit-card');
+        if (orbitCard && window.matchMedia('(pointer: fine)').matches) {
+            orbitCard.addEventListener('pointermove', (event) => {
+                const bounds = orbitCard.getBoundingClientRect();
+                const x = (event.clientX - bounds.left) / bounds.width - 0.5;
+                const y = (event.clientY - bounds.top) / bounds.height - 0.5;
+                orbitCard.style.setProperty('--tilt-x', `${x * 7}deg`);
+                orbitCard.style.setProperty('--tilt-y', `${y * -7}deg`);
+            });
+            orbitCard.addEventListener('pointerleave', () => {
+                orbitCard.style.removeProperty('--tilt-x');
+                orbitCard.style.removeProperty('--tilt-y');
+            });
         }
 
     </script>
