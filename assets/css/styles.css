@@ -1682,11 +1682,11 @@ textarea:focus-visible {
 .code-rocket__nose {
     position: absolute;
     z-index: 0;
-    top: 11px;
-    left: 35px;
-    width: 47px;
-    height: 62px;
-    border-radius: 48px 48px 12px 12px;
+    top: 10px;
+    left: 34px;
+    width: 49px;
+    height: 63px;
+    border-radius: 50px 50px 13px 13px;
     background: linear-gradient(90deg, #eff8ff, #5082ac 60%, #d8effe);
     clip-path: polygon(50% 0, 94% 100%, 6% 100%);
 }
