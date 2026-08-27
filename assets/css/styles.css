@@ -1794,8 +1794,27 @@ textarea:focus-visible {
 .reveal.is-visible { opacity: 1; transform: translateY(0); }
 .edition-steps .edition-step:nth-child(2) { transition-delay: 100ms; }
 .edition-steps .edition-step:nth-child(3) { transition-delay: 200ms; }
-.progress-bar--new { overflow: visible; }
-.progress-bar--new::after { content: "Nueva misión: despegamos desde 0 €"; position: absolute; top: 28px; left: 0; color: var(--accent); font-size: 0.84rem; font-weight: 600; }
+.progress-bar--new { overflow: hidden; }
+
+.campaign-reset-note {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.55rem;
+    width: fit-content;
+    margin: 0.35rem auto 1.15rem;
+    padding: 0.45rem 0.9rem;
+    border: 1px solid rgba(0, 172, 193, 0.34);
+    border-radius: 999px;
+    background: rgba(0, 172, 193, 0.11);
+    color: var(--accent);
+    font-size: 0.84rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    text-align: center;
+}
+
+.campaign-reset-note span { color: var(--secondary); }
 
 @keyframes orbitPulse {
     0%, 100% { transform: scale(0.78); opacity: 0.55; }
