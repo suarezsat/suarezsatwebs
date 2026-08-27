@@ -1661,7 +1661,6 @@ textarea:focus-visible {
 
 .code-rocket__body {
     position: absolute;
-    z-index: 1;
     left: 31px;
     top: 38px;
     width: 55px;
@@ -1681,7 +1680,6 @@ textarea:focus-visible {
 
 .code-rocket__nose {
     position: absolute;
-    z-index: 0;
     top: 9px;
     left: 33px;
     width: 55px;
@@ -1693,7 +1691,7 @@ textarea:focus-visible {
 
 .code-rocket__window {
     position: absolute;
-    z-index: 2;
+    z-index: 1;
     top: 26px;
     left: 14px;
     width: 25px;
