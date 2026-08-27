@@ -1680,13 +1680,13 @@ textarea:focus-visible {
 
 .code-rocket__nose {
     position: absolute;
-    top: 7px;
-    left: 31px;
-    width: 55px;
-    height: 66px;
-    border-radius: 54px 54px 14px 14px;
+    top: 11px;
+    left: 35px;
+    width: 47px;
+    height: 62px;
+    border-radius: 48px 48px 12px 12px;
     background: linear-gradient(90deg, #eff8ff, #5082ac 60%, #d8effe);
-    clip-path: polygon(50% 0, 100% 100%, 0 100%);
+    clip-path: polygon(50% 0, 94% 100%, 6% 100%);
 }
 
 .code-rocket__window {
@@ -1746,7 +1746,7 @@ textarea:focus-visible {
 }
 
 .edition-route__heading h2 { margin: 0; }
-.edition-route__heading h2 span { color: var(--primary); }
+.edition-route__heading h2 span { color: #55d9eb; text-shadow: 0 0 18px rgba(85, 217, 235, 0.18); }
 .edition-route__heading p { margin: 0; }
 
 .edition-steps {
