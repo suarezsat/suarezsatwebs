@@ -1180,3 +1180,295 @@ textarea {
     right: 14px;
   }
 }
+/* Fusion: the original animated space atmosphere with the responsive layout. */
+body {
+  background: linear-gradient(160deg, #080e20 0%, #101a30 48%, #091724 100%);
+}
+body::before {
+  display: block;
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  opacity: 0.55;
+  animation: spaceTwinkle 8s ease-in-out infinite alternate;
+  background:
+    radial-gradient(1.5px 1.5px at 12% 18%, #bcecff 70%, transparent),
+    radial-gradient(1px 1px at 42% 32%, #fff 70%, transparent),
+    radial-gradient(1px 1px at 75% 28%, #fff 70%, transparent),
+    radial-gradient(1.5px 1.5px at 88% 64%, #ffe0a0 70%, transparent),
+    radial-gradient(1px 1px at 25% 70%, #bcecff 70%, transparent);
+  background-size: 480px 520px;
+}
+body::after {
+  position: fixed;
+  inset: 0;
+  height: 100vh;
+  background:
+    radial-gradient(ellipse at 10% 20%, #17619b22, transparent 45%),
+    radial-gradient(ellipse at 85% 25%, #4044c133, transparent 45%),
+    radial-gradient(ellipse at 60% 85%, #c78f1720, transparent 50%);
+  animation: spaceNebula 18s ease-in-out infinite alternate;
+}
+.site-header {
+  background: #090f22e8;
+}
+.brand-symbol span {
+  background: #090f22;
+}
+.hero--second-edition .hero-copy h1 em {
+  color: #ffd080;
+  text-shadow: 0 0 45px #ffb30024;
+}
+.hero--finalist .finalist-banner {
+  display: table;
+  padding: 8px 14px;
+  border: 1px solid #edbb6740;
+  border-radius: 30px;
+  background: #edbb6710;
+  color: #ffdb9e;
+  margin-top: 18px;
+}
+.hero--finalist .hero-facts {
+  gap: 9px;
+}
+.hero--finalist .hero-facts span,
+.hero--finalist .hero-facts span + span {
+  padding: 7px 11px;
+  border: 1px solid #71dce12b;
+  border-radius: 25px;
+  background: #66e3dc08;
+  color: #c4e5ed;
+}
+.hero .btn {
+  border-radius: 25px;
+  transition:
+    background 0.2s,
+    box-shadow 0.2s;
+}
+.btn-primary {
+  background: linear-gradient(110deg, #ffc967, #ffb748);
+  border-color: #ffc967;
+  color: #1a1c28;
+}
+.btn-primary:hover {
+  background: #ffdc95;
+  box-shadow: 0 5px 24px #ffbc4a25 !important;
+}
+.hero-visual.rocket-scene {
+  border-radius: 28px;
+  background:
+    radial-gradient(ellipse at 45% 40%, #354ba355, transparent 65%),
+    radial-gradient(ellipse at 80% 90%, #0cc5d62b, transparent 60%), #0b1930;
+  border-color: #6884c14d;
+  box-shadow:
+    0 25px 80px #03071477,
+    inset 0 0 55px #3795af0d;
+}
+.hero-orbit-card::before,
+.hero-orbit-card::after {
+  content: "";
+  display: block;
+  position: absolute;
+  inset: 17%;
+  border: 1px solid #88dbed33;
+  border-radius: 50%;
+  pointer-events: none;
+  background: none;
+  z-index: 0;
+  animation: spaceOrbit 24s linear infinite;
+}
+.hero-orbit-card::before {
+  border-top: 2px solid #7adbe7;
+  box-shadow: 0 -5px 25px #66e3dc12;
+  transform: rotate(-30deg) scaleY(0.65);
+}
+.hero-orbit-card::after {
+  inset: 9%;
+  border-left: 2px solid #f6cb77;
+  animation-direction: reverse;
+  animation-duration: 35s;
+}
+.mission-coordinate {
+  top: 25px;
+  left: 25px;
+  transform: none;
+  text-align: left;
+  font-size: 9px;
+  opacity: 0.8;
+}
+.code-rocket {
+  animation: fusionFlight 6s ease-in-out infinite;
+  filter: drop-shadow(0 12px 25px #5fccff35);
+}
+.rocket-scene__stars {
+  animation: spaceTwinkle 5s ease-in-out infinite alternate;
+  opacity: 0.8;
+}
+.rocket-scene__planet--one {
+  opacity: 0.65;
+}
+.hero--finalist .launch-status-card {
+  border-color: #66e3dc35;
+  background: #09162be6;
+  border-radius: 14px;
+}
+.mission-strip {
+  background: linear-gradient(110deg, #1d28495c, #12354355);
+  border: 1px solid #8bb8d326;
+  border-radius: 18px;
+  padding: 28px;
+  margin-bottom: 38px;
+}
+.mission-strip strong {
+  color: #ffe0a7;
+}
+.section-light {
+  border-top: 1px solid #a8c6e014;
+}
+.edition-route {
+  border-top: 0;
+}
+.card,
+.contact-option,
+.team-member-card,
+.timeline-item,
+.media-card,
+.edition-step:not(.edition-step--highlight) {
+  background: linear-gradient(140deg, #18233b, #101d30);
+  border-color: #9ab5e022;
+  border-radius: 19px;
+  box-shadow: 0 12px 35px #0207191a;
+}
+.edition-step--highlight {
+  background: linear-gradient(135deg, #194e59, #223456);
+  border-radius: 19px;
+  border-color: #6edcdb55;
+}
+.sponsor-logo-card {
+  background: linear-gradient(145deg, #19233b, #102332);
+  border-radius: 18px;
+}
+.card,
+.contact-option,
+.team-member-card,
+.sponsor-logo-card,
+.edition-step {
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+.closing-cta {
+  background: radial-gradient(ellipse at 80% 50%, #405db825, transparent 60%);
+  border-radius: 22px;
+}
+.site-footer {
+  background: #060d1c;
+}
+.mini-progress > span,
+.progress-fill {
+  background: linear-gradient(90deg, #62e1db, #ffcb77);
+}
+@media (hover: hover) and (pointer: fine) {
+  .card:hover,
+  .contact-option:hover,
+  .team-member-card:hover,
+  .sponsor-logo-card:hover,
+  .edition-step:hover {
+    transform: translateY(-5px) !important;
+    border-color: #6edcdb66;
+    box-shadow: 0 18px 35px #02071944;
+  }
+}
+@keyframes spaceTwinkle {
+  from {
+    opacity: 0.3;
+  }
+  to {
+    opacity: 0.8;
+  }
+}
+@keyframes spaceNebula {
+  from {
+    transform: translateY(-12px);
+    opacity: 0.65;
+  }
+  to {
+    transform: translateY(12px);
+    opacity: 1;
+  }
+}
+@keyframes spaceOrbit {
+  from {
+    transform: rotate(0deg) scaleY(0.72);
+  }
+  to {
+    transform: rotate(360deg) scaleY(0.72);
+  }
+}
+@keyframes fusionFlight {
+  0%,
+  100% {
+    transform: translate(-4px, 8px) rotate(20deg);
+  }
+  50% {
+    transform: translate(7px, -14px) rotate(25deg);
+  }
+}
+@keyframes sectionArrival {
+  from {
+    opacity: 0.25;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.section-arrived {
+  animation: sectionArrival 0.65s ease-out both;
+}
+@media (max-width: 700px) {
+  .mission-strip {
+    padding: 22px 16px;
+    gap: 22px 12px;
+  }
+  .mission-strip > div,
+  .mission-strip > a {
+    padding-left: 12px;
+  }
+  .hero--finalist .hero-facts span,
+  .hero--finalist .hero-facts span + span {
+    font-size: 9px;
+    padding: 6px 9px;
+  }
+  .hero--finalist .finalist-banner {
+    font-size: 10px;
+  }
+  .hero-visual.rocket-scene {
+    border-radius: 22px;
+  }
+  .mission-coordinate {
+    top: 20px;
+    left: 20px;
+    font-size: 8px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  body::before,
+  body::after,
+  .hero-orbit-card::before,
+  .hero-orbit-card::after,
+  .code-rocket,
+  .rocket-scene__stars,
+  .section-arrived {
+    animation: none !important;
+  }
+  .card:hover,
+  .contact-option:hover,
+  .team-member-card:hover,
+  .sponsor-logo-card:hover,
+  .edition-step:hover {
+    transform: none !important;
+  }
+}

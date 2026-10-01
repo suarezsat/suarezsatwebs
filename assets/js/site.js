@@ -47,3 +47,24 @@
     }
   }
 })();
+
+// Reveal sections once, without hiding content before JavaScript is available.
+if (
+  "IntersectionObserver" in window &&
+  !window.matchMedia("(prefers-reduced-motion: reduce)").matches
+) {
+  const arrivals = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("section-arrived");
+          arrivals.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.08 },
+  );
+  document
+    .querySelectorAll("main > .section-light")
+    .forEach((section) => arrivals.observe(section));
+}
