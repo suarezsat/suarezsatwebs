@@ -8,33 +8,15 @@
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/refinement.css">
+<script src="assets/js/site.js" defer></script>
 </head>
 <body>
-    <header>
-        <div class="container nav">
-            <a class="logo" href="index.html">
-                <svg viewBox="0 0 64 64" role="img" aria-hidden="true">
-                    <path d="M32 4C23 10 18 20 18 32s5 22 14 28c9-6 14-16 14-28S41 10 32 4z" fill="#00acc1"/>
-                    <path d="M28 44h8l4 10-8-4-8 4 4-10z" fill="#ffb300"/>
-                </svg>
-                
-                <img class="logo-image" src="assets/media/brand/suarezsat-dark-white.png" alt="Logo SuarezSat" loading="lazy">
-                <span class="logo-text">SuarezSat</span>
-            </a>
-            <nav class="nav-links">
-                <a href="index.html">Inicio</a>
-                <a href="mission.html">Misión</a>
-                <a href="team.html">Equipo</a>
-                <a href="crowdfunding.html">Crowdfunding</a>
-                <a aria-current="page" href="sponsors.html">Patrocinadores</a>
-                <a href="multimedia.html">Multimedia</a>
-                <a href="contact.html">Contacto</a>
-            </nav>
-        </div>
-    </header>
+<a class="skip-link" href="#main-content">Saltar al contenido</a>
+    <header class="site-header"><div class="container nav"><a class="logo" href="index.html" aria-label="SuarezSat, inicio"><span class="brand-symbol" aria-hidden="true">S<span>↗</span></span><span>SuarezSat<span class="brand-dot">.</span></span></a><button class="menu-toggle" aria-expanded="false" aria-controls="primary-navigation" hidden>Menú <span aria-hidden="true">☰</span></button><nav class="nav-links" id="primary-navigation" aria-label="Navegación principal"><a href="index.html">Inicio</a><a href="mission.html">Misión</a><a href="team.html">Equipo</a><a href="crowdfunding.html">Crowdfunding</a><a href="sponsors.html" aria-current="page">Patrocinadores</a><a href="multimedia.html">Multimedia</a><a href="contact.html">Contacto</a></nav></div></header>
 
-    <main>
+    <main id="main-content" tabindex="-1">
         <!-- Botón de acceso oculto -->
         <button id="secretAccessBtn" class="secret-access-btn" aria-label="Acceso restringido">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -44,13 +26,13 @@
         </button>
 
         <!-- Modal de contraseña -->
-        <div id="passwordModal" class="password-modal">
+        <div id="passwordModal" class="password-modal" role="dialog" aria-modal="true" aria-label="Acceso de patrocinadores">
             <div class="password-modal-content">
-                <button class="password-modal-close" id="closeModal">&times;</button>
+                <button class="password-modal-close" id="closeModal" aria-label="Cerrar acceso restringido">&times;</button>
                 <h2>Acceso Restringido</h2>
                 <p>Ingresa la contraseña para acceder al contenido exclusivo</p>
                 <form id="passwordForm">
-                    <input type="password" id="passwordInput" placeholder="Contraseña" required autofocus>
+                    <input type="password" id="passwordInput" aria-label="Contraseña de patrocinadores" autocomplete="current-password" placeholder="Contraseña" required autofocus>
                     <p id="passwordError" class="password-error"></p>
                     <button type="submit" class="btn btn-primary">Acceder</button>
                 </form>
@@ -75,6 +57,69 @@
                 <div class="orbit orbit--small"></div>
                 <div class="satellite"></div>
                 <div class="signal"></div>
+            </div>
+        </section>
+<section class="container section-light">
+            <h2>Patrocinadores actuales</h2>
+            <p>Agradecemos el apoyo de quienes ya han apostado por SuarezSat. Su ayuda nos permite seguir avanzando.</p>
+            <div class="sponsor-logo-grid">
+                <div class="sponsor-logo-card">
+                    <div class="sponsor-logo-surface">
+                        <img class="sponsor-logo-large" src="assets/media/sponsors/coworktarraco.png" alt="COWORKTARRACO">
+                    </div>
+<h3 class="sponsor-name">COWORKTARRACO</h3>
+                    <p>Nuestro primer gran patrocinador fuera de Andalucía</p>
+                </div>
+                <div class="sponsor-logo-card">
+                    <div class="sponsor-logo-surface">
+                        <img class="sponsor-logo-large" src="assets/media/sponsors/academia10-granada.png" alt="Academia10 Granada">
+                    </div>
+<h3 class="sponsor-name">Academia10 Granada</h3>
+                    <p>Patrocinador principal actualmente, con una gran aportación.</p>
+                </div>
+                <div class="sponsor-logo-card">
+                    <div class="sponsor-logo-surface">
+                        <img src="assets/media/sponsors/FUNDACIONVERTICAL022.png" alt="Caja Rural">
+                    </div>
+<h3 class="sponsor-name">Caja Rural</h3>
+                    <p>Patrocinio destacado y clave que impulsa nuestro proyecto.</p>
+                </div>
+                <div class="sponsor-logo-card">
+                    <div class="sponsor-logo-surface">
+                        <img class="sponsor-logo-large" src="assets/media/sponsors/comunidades-del-sur.png" alt="Comunidades del Sur">
+                    </div>
+<h3 class="sponsor-name">Comunidades del Sur</h3>
+                    <p>Gran patrocinador que nos ha ayudado en el desarrollo del proyecto.</p>
+                </div>
+
+                <div class="sponsor-logo-card">
+                    <div class="sponsor-logo-surface">
+                        <img src="assets/media/sponsors/rayo-eneas.png" alt="Rayo Eneas">
+                    </div>
+<h3 class="sponsor-name">Rayo Eneas</h3>
+                    <p>Equipo de fútbol local que aportó el primer impulso al proyecto.</p>
+                </div>
+                <div class="sponsor-logo-card">
+                    <div class="sponsor-logo-surface">
+                        <img src="assets/media/sponsors/erre-que-erre.png" alt="Erre Que Erre Publicidad">
+                    </div>
+<h3 class="sponsor-name">Erre Que Erre Publicidad</h3>
+                    <p>Apoyo en el logotipo y donativo clave para seguir avanzando.</p>
+                </div>
+                <div class="sponsor-logo-card">
+                    <div class="sponsor-logo-surface">
+                        <img src="assets/media/sponsors/la-rezeta.png" alt="Gastrobar La Rezeta">
+                    </div>
+<h3 class="sponsor-name">Gastrobar La Rezeta</h3>
+                    <p>Colaboración local que nos ayuda a continuar con el proyecto.</p>
+                </div>
+                <div class="sponsor-logo-card">
+                    <div class="sponsor-logo-surface">
+                        <img class="sponsor-logo-large" src="assets/media/sponsors/tm-digital.png" alt="TM Digital">
+                    </div>
+<h3 class="sponsor-name">TM Digital</h3>
+                    <p>Patrocinador de gran apoyo en tecnologías e IA.</p>
+                </div>
             </div>
         </section>
 
@@ -145,90 +190,10 @@
         </section>
 
         <!-- Aliados actuales al final -->
-        <section class="container section-light">
-            <h2>Patrocinadores actuales</h2>
-            <p>Agradecemos el apoyo de quienes ya han apostado por SuarezSat. Su ayuda nos permite seguir avanzando.</p>
-            <div class="sponsor-logo-grid">
-                <div class="sponsor-logo-card">
-                    <div class="sponsor-logo-surface">
-                        <img class="sponsor-logo-large" src="assets/media/sponsors/coworktarraco.png" alt="COWORKTARRACO">
-                    </div>
-                    <p>Nuestro primer gran patrocinador fuera de Andalucía</p>
-                </div>
-                <div class="sponsor-logo-card">
-                    <div class="sponsor-logo-surface">
-                        <img class="sponsor-logo-large" src="assets/media/sponsors/academia10-granada.png" alt="Academia10 Granada">
-                    </div>
-                    <p>Patrocinador principal actualmente, con una gran aportación.</p>
-                </div>
-                <div class="sponsor-logo-card">
-                    <div class="sponsor-logo-surface">
-                        <img src="assets/media/sponsors/FUNDACIONVERTICAL022.png" alt="Caja Rural">
-                    </div>
-                    <p>Patrocinio destacado y clave que impulsa nuestro proyecto.</p>
-                </div>
-                <div class="sponsor-logo-card">
-                    <div class="sponsor-logo-surface">
-                        <img class="sponsor-logo-large" src="assets/media/sponsors/comunidades-del-sur.png" alt="Comunidades del Sur">
-                    </div>
-                    <p>Gran patrocinador que nos ha ayudado en el desarrollo del proyecto.</p>
-                </div>
-        
-                <div class="sponsor-logo-card">
-                    <div class="sponsor-logo-surface">
-                        <img src="assets/media/sponsors/rayo-eneas.png" alt="Rayo Eneas">
-                    </div>
-                    <p>Equipo de fútbol local que aportó el primer impulso al proyecto.</p>
-                </div>
-                <div class="sponsor-logo-card">
-                    <div class="sponsor-logo-surface">
-                        <img src="assets/media/sponsors/erre-que-erre.png" alt="Erre Que Erre Publicidad">
-                    </div>
-                    <p>Apoyo en el logotipo y donativo clave para seguir avanzando.</p>
-                </div>
-                <div class="sponsor-logo-card">
-                    <div class="sponsor-logo-surface">
-                        <img src="assets/media/sponsors/la-rezeta.png" alt="Gastrobar La Rezeta">
-                    </div>
-                    <p>Colaboración local que nos ayuda a continuar con el proyecto.</p>
-                </div>
-                <div class="sponsor-logo-card">
-                    <div class="sponsor-logo-surface">
-                        <img class="sponsor-logo-large" src="assets/media/sponsors/tm-digital.png" alt="TM Digital">
-                    </div>
-                    <p>Patrocinador de gran apoyo en tecnologías e IA.</p>
-                </div>
-            </div>
-        </section>
+
     </main>
 
-    <footer>
-        <div class="container footer-grid">
-            <div>
-                <h4 class="footer-title">Contactos clave</h4>
-                <p>Patrocinios: <a href="mailto:suarezsatinfo@gmail.com">suarezsatinfo@gmail.com</a></p>
-                <p>Donaciones: <a href="mailto:suarezsatinfo@gmail.com">suarezsatinfo@gmail.com</a></p>
-            </div>
-            <div>
-                <h4 class="footer-title">Recursos</h4>
-                <p><a href="crowdfunding.html">Plan de crowdfunding</a></p>
-                <p><a href="mission.html">Resumen de misión</a></p>
-                <p><a href="team.html">Equipo técnico</a></p>
-            </div>
-            <div>
-                <h4 class="footer-title">Síguenos</h4>
-                <div class="social-links">
-                    <a href="#" aria-label="Instagram SuarezSat">IG</a>
-                    <a href="#" aria-label="Twitter SuarezSat">TW</a>
-                    <a href="#" aria-label="YouTube SuarezSat">YT</a>
-                </div>
-            </div>
-        </div>
-        <div class="divider container"></div>
-        <div class="container">
-            <p>&copy; <span id="year"></span> SuarezSat · IES Padre Suárez.</p>
-        </div>
-    </footer>
+    <footer class="site-footer"><div class="container footer-grid"><div><a class="logo" href="index.html">SuarezSat<span class="brand-dot">.</span></a><p>Una misión pequeña.<br>Una ambición enorme.</p><span class="footer-location">IES Padre Suárez · Granada</span></div><div><h4 class="footer-title">Explora la misión</h4><a href="mission.html">Nuestro CanSat</a><a href="team.html">El equipo</a><a href="multimedia.html">Diario de la misión</a></div><div><h4 class="footer-title">Forma parte</h4><a href="crowdfunding.html">Apoya el próximo despegue</a><a href="sponsors.html">Nuestros patrocinadores</a><a href="contact.html">Hablemos</a></div><div><h4 class="footer-title">Conecta con nosotros</h4><a href="mailto:suarezsatinfo@gmail.com">suarezsatinfo@gmail.com</a><a href="https://www.instagram.com/suarezsat_26/" target="_blank" rel="noopener noreferrer">Instagram ↗</a><a href="https://www.tiktok.com/@suarez_sat26" target="_blank" rel="noopener noreferrer">TikTok ↗</a></div></div><div class="container footer-bottom"><span>© <span id="year">2026</span> SuarezSat</span><span>Ciencia, tecnología y equipo.</span><a href="#main-content">Volver arriba ↑</a></div></footer>
 
     <script>
         document.getElementById("year").textContent = new Date().getFullYear();

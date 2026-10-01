@@ -8,35 +8,17 @@
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/refinement.css">
+<script src="assets/js/site.js" defer></script>
 </head>
 <body>
-    <header>
-        <div class="container nav">
-            <a class="logo" href="index.html">
-                <svg viewBox="0 0 64 64" role="img" aria-hidden="true">
-                    <path d="M32 4C23 10 18 20 18 32s5 22 14 28c9-6 14-16 14-28S41 10 32 4z" fill="#00acc1"/>
-                    <path d="M28 44h8l4 10-8-4-8 4 4-10z" fill="#ffb300"/>
-                </svg>
-                
-                <img class="logo-image" src="assets/media/brand/suarezsat-dark-white.png" alt="Logo SuarezSat" loading="lazy">
-                <span class="logo-text">SuarezSat</span>
-            </a>
-            <nav class="nav-links">
-                <a href="index.html">Inicio</a>
-                <a href="mission.html">Misión</a>
-                <a href="team.html">Equipo</a>
-                <a aria-current="page" href="crowdfunding.html">Crowdfunding</a>
-                <a href="sponsors.html">Patrocinadores</a>
-                <a href="multimedia.html">Multimedia</a>
-                <a href="contact.html">Contacto</a>
-            </nav>
-        </div>
-    </header>
+<a class="skip-link" href="#main-content">Saltar al contenido</a>
+    <header class="site-header"><div class="container nav"><a class="logo" href="index.html" aria-label="SuarezSat, inicio"><span class="brand-symbol" aria-hidden="true">S<span>↗</span></span><span>SuarezSat<span class="brand-dot">.</span></span></a><button class="menu-toggle" aria-expanded="false" aria-controls="primary-navigation" hidden>Menú <span aria-hidden="true">☰</span></button><nav class="nav-links" id="primary-navigation" aria-label="Navegación principal"><a href="index.html">Inicio</a><a href="mission.html">Misión</a><a href="team.html">Equipo</a><a href="crowdfunding.html" aria-current="page">Crowdfunding</a><a href="sponsors.html">Patrocinadores</a><a href="multimedia.html">Multimedia</a><a href="contact.html">Contacto</a></nav></div></header>
 
-    <main>
+    <main id="main-content" tabindex="-1">
         <section class="hero container">
-            <span class="pill">Segunda edición · campaña reiniciada</span>
+            <span class="pill">Segunda edición · Juntos llegamos más lejos</span>
             <h1>El siguiente despegue empieza aquí</h1>
             <p>
                 Después de ser finalistas el año pasado, reiniciamos la campaña para construir la mejor versión de SuarezSat.
@@ -54,7 +36,20 @@
                 <div class="satellite"></div>
                 <div class="signal"></div>
             </div>
-</section>
+</section><section class="container section-light campaign-panel">
+            <h2>Estado de la campaña</h2>
+            <p class="campaign-reset-note"><span aria-hidden="true">✦</span> Nueva misión: ya hemos recaudado 175 € <span aria-hidden="true">✦</span></p>
+            <p>Gracias a vuestro apoyo, ya hemos recaudado 175 € para esta segunda edición.</p>
+            <div class="progress-wrapper">
+                <div class="progress-header">
+                    <span>Recaudado: 175 €</span>
+                    <span>Objetivo: 1.000 €</span>
+                </div>
+                <div class="progress-bar progress-bar--new" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="17.5" aria-label="Recaudación de la campaña" aria-valuetext="175 € recaudados de 1.000 €: 17,5 %">
+                    <div class="progress-fill" style="width: 17.5%;"></div>
+                </div>
+            </div>
+        </section>
 
         <section class="container section-light">
             <h2>Donaciones seguras con PayPal</h2>
@@ -127,20 +122,7 @@
             </div>
         </section>
 
-        <section class="container section-light">
-            <h2>Estado de la campaña</h2>
-            <p class="campaign-reset-note"><span aria-hidden="true">✦</span> Nueva misión: ya hemos recaudado 175 € <span aria-hidden="true">✦</span></p>
-            <p>Gracias a vuestro apoyo, ya hemos recaudado 175 € para esta segunda edición.</p>
-            <div class="progress-wrapper">
-                <div class="progress-header">
-                    <span>Recaudado: 175 €</span>
-                    <span>Objetivo: 1.000 €</span>
-                </div>
-                <div class="progress-bar progress-bar--new" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="17.5" aria-label="Recaudación de la campaña" aria-valuetext="175 € recaudados de 1.000 €: 17,5 %">
-                    <div class="progress-fill" style="width: 17.5%;"></div>
-                </div>
-            </div>
-        </section>
+
 
         <section class="container section-light">
             <h2>¿Quieres colaborar de otra forma?</h2>
@@ -161,33 +143,7 @@
         </section>
     </main>
 
-    <footer>
-        <div class="container footer-grid">
-            <div>
-                <h4 class="footer-title">Contacto directo</h4>
-                <p>Crowdfunding: <a href="mailto:suarezsatinfo@gmail.com">suarezsatinfo@gmail.com</a></p>
-                <p>Dudas: <a href="mailto:suarezsatinfo@gmail.com">suarezsatinfo@gmail.com</a></p>
-            </div>
-            <div>
-                <h4 class="footer-title">Documentación</h4>
-                <p><a href="mission.html">Plan de misión</a></p>
-                <p><a href="team.html">Equipo técnico</a></p>
-                <p><a href="sponsors.html">Red de colaboradores</a></p>
-            </div>
-            <div>
-                <h4 class="footer-title">Redes</h4>
-                <div class="social-links">
-                    <a href="#" aria-label="Instagram SuarezSat">IG</a>
-                    <a href="#" aria-label="Twitter SuarezSat">TW</a>
-                    <a href="#" aria-label="YouTube SuarezSat">YT</a>
-                </div>
-            </div>
-        </div>
-        <div class="divider container"></div>
-        <div class="container">
-            <p>&copy; <span id="year"></span> SuarezSat · IES Padre Suárez.</p>
-        </div>
-    </footer>
+    <footer class="site-footer"><div class="container footer-grid"><div><a class="logo" href="index.html">SuarezSat<span class="brand-dot">.</span></a><p>Una misión pequeña.<br>Una ambición enorme.</p><span class="footer-location">IES Padre Suárez · Granada</span></div><div><h4 class="footer-title">Explora la misión</h4><a href="mission.html">Nuestro CanSat</a><a href="team.html">El equipo</a><a href="multimedia.html">Diario de la misión</a></div><div><h4 class="footer-title">Forma parte</h4><a href="crowdfunding.html">Apoya el próximo despegue</a><a href="sponsors.html">Nuestros patrocinadores</a><a href="contact.html">Hablemos</a></div><div><h4 class="footer-title">Conecta con nosotros</h4><a href="mailto:suarezsatinfo@gmail.com">suarezsatinfo@gmail.com</a><a href="https://www.instagram.com/suarezsat_26/" target="_blank" rel="noopener noreferrer">Instagram ↗</a><a href="https://www.tiktok.com/@suarez_sat26" target="_blank" rel="noopener noreferrer">TikTok ↗</a></div></div><div class="container footer-bottom"><span>© <span id="year">2026</span> SuarezSat</span><span>Ciencia, tecnología y equipo.</span><a href="#main-content">Volver arriba ↑</a></div></footer>
     <script>
         document.getElementById("year").textContent = new Date().getFullYear();
         const logopropio = "";
