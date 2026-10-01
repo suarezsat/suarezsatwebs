@@ -1,20 +1,20 @@
 /* SuarezSat — shared visual system. Loaded after the original component styles. */
 :root {
-  --primary: #17344b;
-  --accent: #66e3dc;
+  --primary: #2d2c27;
+  --accent: #ede35c;
   --secondary: #ebc078;
-  --light: #f2f6fa;
-  --text: #c0ccd9;
+  --light: #f6f6f6;
+  --text: #cececb;
   --font-sans: "DM Sans", "Segoe UI", sans-serif;
   --line: rgba(170, 202, 224, 0.16);
-  --panel: #101e2c;
+  --panel: #1b1b18;
 }
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 110px;
 }
 body {
-  background: #08131e;
+  background: #11110f;
   color: var(--text);
   line-height: 1.7;
   font-family: var(--font-sans);
@@ -27,7 +27,7 @@ body::after {
   position: absolute;
   inset: 0 0 auto;
   height: 850px;
-  background: radial-gradient(ellipse at 80% 10%, #16404e66, transparent 65%);
+  background: radial-gradient(ellipse at 80% 10%, #2d2d2866, transparent 65%);
   animation: none;
   filter: none;
   opacity: 1;
@@ -91,7 +91,7 @@ video {
   left: 15px;
   z-index: 100;
   background: var(--accent);
-  color: #08131e;
+  color: #11110f;
   padding: 12px 18px;
   transform: translateY(-160%);
 }
@@ -99,7 +99,7 @@ video {
   transform: none;
 }
 .site-header {
-  background: #08131eee;
+  background: #11110fee;
   backdrop-filter: blur(18px);
   border-bottom: 1px solid var(--line);
   z-index: 40;
@@ -134,7 +134,7 @@ video {
   font-size: 18px;
   right: -7px;
   top: -10px;
-  background: #08131e;
+  background: #11110f;
 }
 .nav-links {
   gap: 22px;
@@ -177,13 +177,13 @@ video {
   margin: 18px 0 25px;
   text-shadow: none;
   background: none;
-  color: #f2f6fa;
+  color: #f6f6f6;
   -webkit-text-fill-color: currentColor;
 }
 .hero p {
   font-size: 17px;
   line-height: 1.85;
-  color: #b2c2d0;
+  color: #c3c2bf;
   max-width: 760px;
   margin: 0 0 25px;
 }
@@ -232,7 +232,7 @@ video {
 .hero--finalist .finalist-banner {
   background: none;
   border: 0;
-  color: #b8c7d3;
+  color: #c7c7c4;
   padding: 0;
   margin: 12px 0 0;
   font-size: 12px;
@@ -252,7 +252,7 @@ video {
   border-radius: 0;
   background: none;
   padding: 0;
-  color: #b6c7d4;
+  color: #c6c6c4;
   font-size: 11px;
 }
 .hero-facts span + span {
@@ -279,19 +279,19 @@ video {
 .btn-primary {
   background: var(--accent);
   border: 1px solid var(--accent);
-  color: #081b24;
+  color: #141411;
 }
 .btn-primary:hover {
-  background: #a6f5ee;
-  color: #081b24;
+  background: #cfcecc;
+  color: #141411;
 }
 .btn-secondary {
   background: transparent;
-  border: 1px solid #526473;
-  color: #edf5f9;
+  border: 1px solid #656560;
+  color: #f3f3f3;
 }
 .btn-secondary:hover {
-  background: #1c3444;
+  background: #2c2b26;
   border-color: var(--accent);
   color: #fff;
 }
@@ -302,13 +302,13 @@ video {
 .hero-visual.rocket-scene {
   min-height: 440px;
   aspect-ratio: 1/1;
-  border: 1px solid #375966;
+  border: 1px solid #51504c;
   border-radius: 50% 50% 12px 12px;
   background:
-    radial-gradient(ellipse at 50% 60%, #1c586866, transparent 65%),
-    repeating-linear-gradient(0deg, transparent 0 39px, #a8dbe808 40px),
-    repeating-linear-gradient(90deg, transparent 0 39px, #a8dbe808 40px),
-    #0c1c29;
+    radial-gradient(ellipse at 50% 60%, #e6d71966, transparent 65%),
+    repeating-linear-gradient(0deg, transparent 0 39px, #c9c9c708 40px),
+    repeating-linear-gradient(90deg, transparent 0 39px, #c9c9c708 40px),
+    #181815;
   box-shadow: none;
   transform: none;
 }
@@ -328,7 +328,7 @@ video {
   position: absolute;
   top: 32px;
   left: 28px;
-  color: #8ba6b4;
+  color: #a2a29d;
   font: 10px/1.8 monospace;
   letter-spacing: 1px;
 }
@@ -338,8 +338,8 @@ video {
   bottom: 22px;
   max-width: none;
   border-radius: 6px;
-  background: #0a1a25e8;
-  border: 1px solid #3c5a65;
+  background: #151513e8;
+  border: 1px solid #53524e;
   box-shadow: none;
   text-align: left;
   padding: 15px 20px;
@@ -353,7 +353,7 @@ video {
 }
 .launch-status-card span {
   font-size: 12px;
-  color: #b6c7d1;
+  color: #c5c5c2;
 }
 .mission-strip {
   display: grid;
@@ -377,18 +377,18 @@ video {
   font:
     38px "Space Grotesk",
     sans-serif;
-  color: #eef5f8;
+  color: #f3f3f3;
   letter-spacing: -2px;
 }
 .mission-strip strong span {
   font-size: 14px;
   letter-spacing: 0;
-  color: #99adbd;
+  color: #aeada8;
 }
 .mission-strip p {
   font-size: 11px;
   margin-top: 8px;
-  color: #9fb3c3;
+  color: #b3b3af;
 }
 .mission-strip a {
   text-decoration: none;
@@ -396,7 +396,7 @@ video {
 .mini-progress {
   display: block;
   height: 3px;
-  background: #2b4050;
+  background: #383731;
   margin-top: 14px;
 }
 .mini-progress > span {
@@ -418,17 +418,17 @@ video {
 .section-light h2 {
   font-size: clamp(1.8rem, 3.1vw, 2.6rem);
   font-weight: 500;
-  color: #edf5fa;
+  color: #f4f4f3;
   margin-bottom: 22px;
 }
 .section-light > p {
   max-width: 740px;
   line-height: 1.8;
-  color: #aebfce;
+  color: #c0c0bc;
 }
 .section-light h3 {
   font-size: 21px;
-  color: #eef5f9;
+  color: #f4f4f3;
 }
 .section-light p {
   line-height: 1.8;
@@ -457,13 +457,13 @@ video {
 .card:hover,
 .contact-option:hover,
 .team-member-card:hover {
-  border-color: #537584;
+  border-color: #6f6e68;
   box-shadow: none;
 }
 .card p,
 .contact-option p,
 .team-member-card p {
-  color: #b6c5d1;
+  color: #c5c5c2;
 }
 .card h3,
 .contact-option h3 {
@@ -476,18 +476,18 @@ video {
   gap: 50px;
 }
 .edition-step:not(.edition-step--highlight) {
-  background: #101e2c;
+  background: #1b1b18;
   color: var(--text);
 }
 .edition-step:not(.edition-step--highlight) h3 {
-  color: #edf5fa;
+  color: #f4f4f3;
 }
 .edition-step:not(.edition-step--highlight) p {
-  color: #b6c5d1;
+  color: #c5c5c2;
 }
 .edition-step--highlight {
-  background: #153b44;
-  border-color: #49716e;
+  background: #282823;
+  border-color: #605f5a;
 }
 .edition-step::before {
   display: none;
@@ -496,7 +496,7 @@ video {
   font:
     32px "Space Grotesk",
     sans-serif;
-  color: #769aa8 !important;
+  color: #92928c !important;
   letter-spacing: -1px;
 }
 .edition-step:hover {
@@ -513,7 +513,7 @@ video {
 }
 .sponsor-logo-card {
   padding: 18px;
-  background: #101e2c;
+  background: #1b1b18;
   border: 1px solid var(--line);
   border-radius: 12px;
   box-shadow: none;
@@ -523,7 +523,7 @@ video {
   transform: none !important;
 }
 .sponsor-logo-card:hover {
-  border-color: #577585;
+  border-color: #71716b;
 }
 .sponsor-logo-surface {
   height: 128px;
@@ -550,17 +550,17 @@ video {
 .sponsor-logo-card p {
   font-size: 12px;
   line-height: 1.7;
-  color: #a7b9c8;
+  color: #bab9b5;
 }
 .timeline {
-  border-color: #375762;
+  border-color: #4f4e4a;
 }
 .timeline-item {
   padding: 25px 30px;
 }
 .timeline-item::before {
   background: var(--accent);
-  box-shadow: 0 0 0 5px #173b43;
+  box-shadow: 0 0 0 5px #292824;
 }
 .stats {
   padding-top: 30px;
@@ -581,7 +581,7 @@ video {
   height: 52px;
   display: grid;
   place-items: center;
-  background: #1d3946;
+  background: #2d2c27;
   color: var(--accent);
   font:
     20px "Space Grotesk",
@@ -593,9 +593,9 @@ video {
   font-size: 20px;
 }
 .campaign-panel {
-  border: 1px solid #3b6e71;
+  border: 1px solid #595853;
   border-radius: 14px;
-  background: #112c35;
+  background: #201f1c;
   margin: 20px auto;
   padding: 34px 40px;
 }
@@ -621,7 +621,7 @@ video {
 }
 .progress-bar {
   height: 10px;
-  background: #314650;
+  background: #42423f;
   border: 0;
 }
 .closing-cta {
@@ -637,8 +637,8 @@ video {
 .site-footer {
   margin-top: 30px;
   padding: 60px 0 25px;
-  background: #060f18;
-  color: #99adbd;
+  background: #0e0d0c;
+  color: #aeada8;
 }
 .site-footer .footer-grid {
   grid-template-columns: 1.3fr 1fr 1fr 1.3fr;
@@ -654,7 +654,7 @@ video {
 .site-footer a:not(.logo) {
   display: block;
   font-size: 12px;
-  color: #a8bdcc;
+  color: #bcbcb8;
   text-decoration: none;
   margin-bottom: 12px;
   overflow-wrap: anywhere;
@@ -695,13 +695,13 @@ select,
 textarea {
   font-size: 16px;
   border-radius: 6px;
-  background: #0a1825;
-  color: #edf5f9;
-  border-color: #4b5f6e;
+  background: #151513;
+  color: #f3f3f3;
+  border-color: #5f5f5a;
 }
 input::placeholder,
 textarea::placeholder {
-  color: #879dac;
+  color: #9d9c96;
 }
 label {
   font-size: 13px;
@@ -712,7 +712,7 @@ textarea {
 .gallery-empty {
   padding: 40px;
   background: var(--panel);
-  border: 1px dashed #49626e;
+  border: 1px dashed #5e5e59;
   border-radius: 12px;
 }
 .gallery-empty h3 {
@@ -745,7 +745,7 @@ textarea {
 .form-confirmation {
   padding: 22px;
   border: 1px solid var(--accent);
-  background: #153d3d;
+  background: #252520;
   border-radius: 8px;
   margin-bottom: 25px;
 }
@@ -788,8 +788,8 @@ textarea {
     gap: 12px;
     align-items: center;
     background: transparent;
-    color: #e9f6f8;
-    border: 1px solid #48616c;
+    color: #f1f1f0;
+    border: 1px solid #5d5c57;
     border-radius: 6px;
     padding: 8px 14px;
     font-size: 13px;
@@ -1019,7 +1019,7 @@ textarea {
   bottom: 22px;
   padding: 15px 20px;
   border-radius: 6px;
-  background: #0a1a25eb;
+  background: #151513eb;
   box-shadow: none;
 }
 .hero--finalist .launch-status-card strong {
@@ -1029,7 +1029,7 @@ textarea {
 }
 .hero--finalist .launch-status-card span {
   font-size: 12px;
-  color: #b6c7d1;
+  color: #c5c5c2;
 }
 .hero-orbit-card::after,
 .section-light::before {
@@ -1048,7 +1048,7 @@ textarea {
 }
 .sponsor-logo-surface:has(img[src*="FUNDACIONVERTICAL022"]),
 .sponsor-logo-surface:has(img[src*="erre-que-erre"]) {
-  background: #243748;
+  background: #31302b;
 }
 @keyframes missionFloat {
   0%,
@@ -1105,7 +1105,7 @@ textarea {
   opacity: 1;
   background: none;
   border-radius: 0;
-  color: #b6c7d4;
+  color: #c6c6c4;
   box-shadow: none;
   padding: 0;
   font-weight: 500;
@@ -1155,8 +1155,8 @@ textarea {
   right: 22px;
   width: 44px;
   height: 44px;
-  background: #163441;
-  border: 1px solid #4e717e;
+  background: #282722;
+  border: 1px solid #696863;
   z-index: 35;
   box-shadow: none;
 }
@@ -1164,12 +1164,12 @@ textarea {
   z-index: 100;
 }
 .password-modal-content {
-  background: #101e2c;
-  border: 1px solid #4e717e;
-  color: #edf5f9;
+  background: #1b1b18;
+  border: 1px solid #696863;
+  color: #f3f3f3;
 }
 .password-modal-close {
-  color: #edf5f9;
+  color: #f3f3f3;
 }
 @media (max-width: 700px) {
   .contact-options {
@@ -1182,7 +1182,7 @@ textarea {
 }
 /* Fusion: the original animated space atmosphere with the responsive layout. */
 body {
-  background: linear-gradient(160deg, #080e20 0%, #101a30 48%, #091724 100%);
+  background: linear-gradient(160deg, #121210 0%, #1d1d19 48%, #141412 100%);
 }
 body::before {
   display: block;
@@ -1192,11 +1192,11 @@ body::before {
   opacity: 0.55;
   animation: spaceTwinkle 8s ease-in-out infinite alternate;
   background:
-    radial-gradient(1.5px 1.5px at 12% 18%, #bcecff 70%, transparent),
+    radial-gradient(1.5px 1.5px at 12% 18%, #dededd 70%, transparent),
     radial-gradient(1px 1px at 42% 32%, #fff 70%, transparent),
     radial-gradient(1px 1px at 75% 28%, #fff 70%, transparent),
     radial-gradient(1.5px 1.5px at 88% 64%, #ffe0a0 70%, transparent),
-    radial-gradient(1px 1px at 25% 70%, #bcecff 70%, transparent);
+    radial-gradient(1px 1px at 25% 70%, #dededd 70%, transparent);
   background-size: 480px 520px;
 }
 body::after {
@@ -1204,16 +1204,16 @@ body::after {
   inset: 0;
   height: 100vh;
   background:
-    radial-gradient(ellipse at 10% 20%, #17619b22, transparent 45%),
-    radial-gradient(ellipse at 85% 25%, #4044c133, transparent 45%),
+    radial-gradient(ellipse at 10% 20%, #e6d71922, transparent 45%),
+    radial-gradient(ellipse at 85% 25%, #e6d81b33, transparent 45%),
     radial-gradient(ellipse at 60% 85%, #c78f1720, transparent 50%);
   animation: spaceNebula 18s ease-in-out infinite alternate;
 }
 .site-header {
-  background: #090f22e8;
+  background: #141311e8;
 }
 .brand-symbol span {
-  background: #090f22;
+  background: #141311;
 }
 .hero--second-edition .hero-copy h1 em {
   color: #ffd080;
@@ -1234,10 +1234,10 @@ body::after {
 .hero--finalist .hero-facts span,
 .hero--finalist .hero-facts span + span {
   padding: 7px 11px;
-  border: 1px solid #71dce12b;
+  border: 1px solid #eee4642b;
   border-radius: 25px;
-  background: #66e3dc08;
-  color: #c4e5ed;
+  background: #ede35c08;
+  color: #d9d9d8;
 }
 .hero .btn {
   border-radius: 25px;
@@ -1248,7 +1248,7 @@ body::after {
 .btn-primary {
   background: linear-gradient(110deg, #ffc967, #ffb748);
   border-color: #ffc967;
-  color: #1a1c28;
+  color: #1e1e1a;
 }
 .btn-primary:hover {
   background: #ffdc95;
@@ -1257,12 +1257,12 @@ body::after {
 .hero-visual.rocket-scene {
   border-radius: 28px;
   background:
-    radial-gradient(ellipse at 45% 40%, #354ba355, transparent 65%),
-    radial-gradient(ellipse at 80% 90%, #0cc5d62b, transparent 60%), #0b1930;
-  border-color: #6884c14d;
+    radial-gradient(ellipse at 45% 40%, #e6d71955, transparent 65%),
+    radial-gradient(ellipse at 80% 90%, #e6d7192b, transparent 60%), #1b1a17;
+  border-color: #eade3f4d;
   box-shadow:
-    0 25px 80px #03071477,
-    inset 0 0 55px #3795af0d;
+    0 25px 80px #0a0a0977,
+    inset 0 0 55px #e6d7190d;
 }
 .hero-orbit-card::before,
 .hero-orbit-card::after {
@@ -1270,7 +1270,7 @@ body::after {
   display: block;
   position: absolute;
   inset: 17%;
-  border: 1px solid #88dbed33;
+  border: 1px solid #f1ea8433;
   border-radius: 50%;
   pointer-events: none;
   background: none;
@@ -1278,8 +1278,8 @@ body::after {
   animation: spaceOrbit 24s linear infinite;
 }
 .hero-orbit-card::before {
-  border-top: 2px solid #7adbe7;
-  box-shadow: 0 -5px 25px #66e3dc12;
+  border-top: 2px solid #efe772;
+  box-shadow: 0 -5px 25px #ede35c12;
   transform: rotate(-30deg) scaleY(0.65);
 }
 .hero-orbit-card::after {
@@ -1298,7 +1298,7 @@ body::after {
 }
 .code-rocket {
   animation: fusionFlight 6s ease-in-out infinite;
-  filter: drop-shadow(0 12px 25px #5fccff35);
+  filter: drop-shadow(0 12px 25px #efe66f35);
 }
 .rocket-scene__stars {
   animation: spaceTwinkle 5s ease-in-out infinite alternate;
@@ -1308,13 +1308,13 @@ body::after {
   opacity: 0.65;
 }
 .hero--finalist .launch-status-card {
-  border-color: #66e3dc35;
-  background: #09162be6;
+  border-color: #ede35c35;
+  background: #181715e6;
   border-radius: 14px;
 }
 .mission-strip {
-  background: linear-gradient(110deg, #1d28495c, #12354355);
-  border: 1px solid #8bb8d326;
+  background: linear-gradient(110deg, #2e2e285c, #27262255);
+  border: 1px solid #efe66f26;
   border-radius: 18px;
   padding: 28px;
   margin-bottom: 38px;
@@ -1323,7 +1323,7 @@ body::after {
   color: #ffe0a7;
 }
 .section-light {
-  border-top: 1px solid #a8c6e014;
+  border-top: 1px solid #c5c5c314;
 }
 .edition-route {
   border-top: 0;
@@ -1334,18 +1334,18 @@ body::after {
 .timeline-item,
 .media-card,
 .edition-step:not(.edition-step--highlight) {
-  background: linear-gradient(140deg, #18233b, #101d30);
-  border-color: #9ab5e022;
+  background: linear-gradient(140deg, #262521, #1d1d19);
+  border-color: #f2ea8822;
   border-radius: 19px;
-  box-shadow: 0 12px 35px #0207191a;
+  box-shadow: 0 12px 35px #0c0c0b1a;
 }
 .edition-step--highlight {
-  background: linear-gradient(135deg, #194e59, #223456);
+  background: linear-gradient(135deg, #34332d, #37362f);
   border-radius: 19px;
-  border-color: #6edcdb55;
+  border-color: #ede35d55;
 }
 .sponsor-logo-card {
-  background: linear-gradient(145deg, #19233b, #102332);
+  background: linear-gradient(145deg, #262621, #1e1e1a);
   border-radius: 18px;
 }
 .card,
@@ -1359,15 +1359,15 @@ body::after {
     box-shadow 0.25s ease;
 }
 .closing-cta {
-  background: radial-gradient(ellipse at 80% 50%, #405db825, transparent 60%);
+  background: radial-gradient(ellipse at 80% 50%, #e6d71925, transparent 60%);
   border-radius: 22px;
 }
 .site-footer {
-  background: #060d1c;
+  background: #0f0f0d;
 }
 .mini-progress > span,
 .progress-fill {
-  background: linear-gradient(90deg, #62e1db, #ffcb77);
+  background: linear-gradient(90deg, #ece257, #ffcb77);
 }
 @media (hover: hover) and (pointer: fine) {
   .card:hover,
@@ -1376,8 +1376,8 @@ body::after {
   .sponsor-logo-card:hover,
   .edition-step:hover {
     transform: translateY(-5px) !important;
-    border-color: #6edcdb66;
-    box-shadow: 0 18px 35px #02071944;
+    border-color: #ede35d66;
+    box-shadow: 0 18px 35px #0c0c0b44;
   }
 }
 @keyframes spaceTwinkle {
@@ -1472,3 +1472,87 @@ body::after {
     transform: none !important;
   }
 }
+
+/* Official SuarezSat identity: original artwork, white and yellow on charcoal. */
+:root {
+  --accent: #e4df00;
+  --secondary: #f4d326;
+  --primary: #272720;
+  --light: #fafafa;
+  --text: #ccccca;
+  --panel: #1b1b1a;
+  --line: rgba(235, 232, 197, 0.16);
+}
+.site-header .logo {
+  display: flex;
+  min-width: 180px;
+}
+.official-brand {
+  display: block;
+  width: 180px;
+  height: 65px;
+  object-fit: contain;
+}
+.site-header .nav {
+  padding: 10px 0;
+}
+.hero--second-edition .hero-copy h1 em {
+  color: #e4df00;
+  text-shadow: 0 0 40px #e4df001a;
+}
+.btn-primary {
+  background: linear-gradient(110deg, #eee929, #d9d500);
+  border-color: #e4df00;
+  color: #151510;
+}
+.btn-primary:hover {
+  background: #f7f36a;
+  color: #151510;
+}
+.hero--finalist .finalist-banner {
+  color: #eeeb90;
+  border-color: #e4df003d;
+  background: #e4df000c;
+}
+.mission-strip strong {
+  color: #efec8c;
+}
+.mini-progress > span,
+.progress-fill {
+  background: linear-gradient(90deg, #d5d100, #fff77a);
+}
+.hero-orbit-card::before {
+  border-top-color: #e4df00;
+}
+.hero-orbit-card::after {
+  border-left-color: #f8f7e1;
+}
+.code-rocket__body {
+  background: linear-gradient(90deg, #fff, #a3a5a5 48%, #555959 78%, #ddd);
+}
+.code-rocket__window {
+  background: #e4df00;
+  box-shadow: 0 0 20px #e4df0066;
+}
+.rocket-scene__planet--one {
+  background: radial-gradient(
+    circle at 28% 25%,
+    #a8a543,
+    #555438 30%,
+    #151614 70%
+  );
+  box-shadow: -26px -18px 65px #e4df001c;
+}
+@media (max-width: 700px) {
+  .official-brand {
+    width: 150px;
+    height: 54px;
+  }
+  .site-header .logo {
+    min-width: 150px;
+  }
+  .site-header .nav {
+    padding: 8px 0;
+  }
+}
+body::after{background:radial-gradient(ellipse at 12% 20%,#e4df0008,transparent 50%),radial-gradient(ellipse at 85% 30%,#e4df0014,transparent 50%),radial-gradient(ellipse at 60% 85%,#ffffff05,transparent 55%)}
