@@ -3,7 +3,7 @@ import { readFileSync } from 'node:fs';
 import { madridDay } from '../src/worker.js';
 const base = process.env.TEST_BASE || 'http://localhost:8787';
 const password = process.env.TEST_PASSWORD || 'local-test-only';
-let cookie = '', entryId = '', mediaId = '';
+let cookie = '', entryId = '', mediaId = '', videoId = '', video;
 async function call(path, method = 'GET', body) {
   return fetch(base + path, { method, headers: { Origin: base, ...(cookie ? { Cookie: cookie } : {}), ...(body ? { 'Content-Type': 'application/json' } : {}) }, body: body ? JSON.stringify(body) : undefined });
 }
@@ -16,14 +16,26 @@ try {
   const image = readFileSync(new URL('../../assets/media/brand/suarezsat-dark-white.png',import.meta.url));
   response = await fetch(base+'/api/admin/media',{method:'POST',headers:{Origin:base,Cookie:cookie,'Content-Type':'image/png'},body:image});
   assert.equal(response.status,201,await response.clone().text()); mediaId = (await response.json()).id;
+  if (process.env.TEST_VIDEO === '1') {
+    video = readFileSync(new URL('../../videos_multimedia/funcionamientodelaia.mp4',import.meta.url));
+    assert.ok(video.length <= 20 * 1024 * 1024);
+    response = await fetch(base+'/api/admin/media',{method:'POST',headers:{Origin:base,Cookie:cookie,'Content-Type':'video/mp4'},body:video});
+    assert.equal(response.status,201,await response.clone().text()); videoId=(await response.json()).id;
+  }
   assert.equal((await call('/media/'+mediaId)).status,404,'Pending upload must not be publicly readable');
-  response = await call('/api/admin/entries','POST',{title:'Prueba de integración',body:'Texto de prueba <script>sin ejecutar</script>\nSegunda línea.',media:[{id:mediaId,caption:'Logo del equipo'}]});
+  response = await call('/api/admin/entries','POST',{title:'Prueba de integración',body:'Texto de prueba <script>sin ejecutar</script>\nSegunda línea.',media:[{id:mediaId,caption:'Logo del equipo'},...(videoId ? [{id:videoId,caption:'Vídeo del proyecto'}] : [])]});
   assert.equal(response.status,201,await response.clone().text()); const created = await response.json(); entryId=created.id; assert.equal(created.day,madridDay());
   response=await call('/api/entries'); const data=await response.json();
   const entry=data.entries.find(e=>e.id===entryId); assert.equal(entry.media[0].caption,'Logo del equipo'); assert.match(entry.body,/<script>/);
   assert.equal(response.headers.get('access-control-allow-origin'),'*');
   response=await fetch(base+'/media/'+mediaId,{headers:{Range:'bytes=0-15'}}); assert.equal(response.status,206); assert.equal((await response.arrayBuffer()).byteLength,16);
   assert.match(response.headers.get('content-range'),/^bytes 0-15\//);
+  if (videoId) {
+    response = await fetch(base+'/media/'+videoId,{headers:{Range:'bytes=0-1023'}});
+    assert.equal(response.status,206); assert.equal(response.headers.get('content-type'),'video/mp4');
+    assert.deepEqual(Buffer.from(await response.arrayBuffer()),video.subarray(0,1024));
+    console.log('PASS: actual 10 MB project video uploaded and served byte-for-byte over HTTP Range.');
+  }
   response=await fetch(base+'/media/'+mediaId,{headers:{Range:'bytes=999999999-'}}); assert.equal(response.status,416);
   assert.equal((await call('/api/admin/entries','POST',{media:[{id:mediaId,caption:'Repeated'}]})).status,400);
   await call('/api/admin/entries/'+entryId,'DELETE'); entryId='';
@@ -34,4 +46,5 @@ try {
 } finally {
   if(entryId) await call('/api/admin/entries/'+entryId,'DELETE');
   if(mediaId) await call('/api/admin/media/'+mediaId,'DELETE');
+  if(videoId) await call('/api/admin/media/'+videoId,'DELETE');
 }

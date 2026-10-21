@@ -17,3 +17,22 @@ test('Unauthenticated publishing and uploads are denied', async () => {
     assert.equal(response.status, 401);
   }
 });
+function freeQuotaEnvironment() {
+  return {
+    MEDIA_KV: { put() { throw new Error('A rejected upload must not reach storage'); } },
+    DB: { prepare() { return { bind() { return this; }, async first() { return { token_hash: 'test' }; }, async run() { return { meta: { changes: 0 } }; } }; } },
+  };
+}
+test('Files over 20 MiB are rejected before storage', async () => {
+  const response = await worker.fetch(new Request('https://panel.example/api/admin/media', {
+    method: 'POST', headers: { Origin: 'https://panel.example', Cookie: 'ss_session=test', 'Content-Type': 'image/png', 'Content-Length': String(20 * 1024 * 1024 + 1) }, body: 'x',
+  }), freeQuotaEnvironment());
+  assert.equal(response.status, 413);
+});
+test('Full free storage stops uploads instead of enabling a paid service', async () => {
+  const response = await worker.fetch(new Request('https://panel.example/api/admin/media', {
+    method: 'POST', headers: { Origin: 'https://panel.example', Cookie: 'ss_session=test', 'Content-Type': 'image/png', 'Content-Length': '1' }, body: 'x',
+  }), freeQuotaEnvironment());
+  assert.equal(response.status, 413);
+  assert.match((await response.json()).error, /espacio gratuito/);
+});
