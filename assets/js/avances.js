@@ -20,7 +20,9 @@
     let day = days.get(entry.day);
     if (!day) {
       const section = element('section', 'diary-day'); section.dataset.month = entry.day.slice(0, 7);
-      const time = element('time', 'diary-date', dateFormat.format(new Date(`${entry.day}T12:00:00Z`))); time.dateTime = entry.day;
+      const time = element('time', 'diary-date'); time.dateTime = entry.day;
+      const dayNumber = element('span', 'diary-date-number', entry.day.slice(-2)); dayNumber.setAttribute('aria-hidden', 'true');
+      time.append(dayNumber, element('span', 'diary-date-label', dateFormat.format(new Date(`${entry.day}T12:00:00Z`))));
       const heading = element('h2'); heading.id = `dia-${entry.day}`; heading.append(time); section.setAttribute('aria-labelledby', heading.id);
       day = element('div', 'diary-day-entries'); section.append(heading, day); feed.append(section); days.set(entry.day, day);
       if (!months.has(section.dataset.month)) {
@@ -45,9 +47,20 @@
           media = element('img'); media.alt = file.caption || entry.title || 'Foto del proyecto SuarezSat'; media.loading = 'lazy'; media.decoding = 'async'; media.src = mediaUrl.href;
           const link = element('a'); link.href = mediaUrl.href; link.target = '_blank'; link.rel = 'noopener'; link.setAttribute('aria-label', `Ampliar: ${media.alt}`); link.append(media); figure.append(link);
         } else if (file.type.startsWith('video/')) {
-          media = element('video'); media.controls = true; media.preload = 'none'; media.playsInline = true;
+          figure.classList.add('diary-media--video');
+          media = element('video'); media.controls = true; media.preload = 'metadata'; media.playsInline = true;
+          media.poster = 'assets/media/avances-video-poster.svg';
+          const frame = element('div', 'diary-video-frame');
+          media.addEventListener('loadedmetadata', () => {
+            if (media.videoWidth && media.videoHeight) {
+              const ratio = media.videoWidth / media.videoHeight;
+              figure.style.setProperty('--video-width', `${Math.min(760, 560 * ratio)}px`);
+              media.style.aspectRatio = String(ratio);
+            }
+          });
+          media.addEventListener('play', () => media.classList.add('is-playing'));
           media.setAttribute('aria-label', file.caption || entry.title || 'Vídeo de SuarezSat'); media.src = mediaUrl.href;
-          media.append(element('p', '', 'Tu navegador no puede reproducir este vídeo.')); figure.append(media);
+          media.append(element('p', '', 'Tu navegador no puede reproducir este vídeo.')); frame.append(media); figure.append(frame);
           const download = element('a', 'diary-video-link', 'Abrir vídeo ↗'); download.href = mediaUrl.href; download.target = '_blank'; download.rel = 'noopener'; figure.append(download);
         } else return;
         let retries = 0;

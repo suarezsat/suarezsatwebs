@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1600" viewBox="0 0 900 1600">
+  <defs><linearGradient id="sky" x2="1" y2="1"><stop stop-color="#244d7d"/><stop offset=".55" stop-color="#283866"/><stop offset="1" stop-color="#594578"/></linearGradient><radialGradient id="planet"><stop stop-color="#74b3ec"/><stop offset="1" stop-color="#355b9b"/></radialGradient></defs>
+  <path fill="url(#sky)" d="M0 0h900v1600H0z"/>
+  <g fill="#e5eeff" opacity=".65"><circle cx="112" cy="180" r="3"/><circle cx="740" cy="236" r="3"/><circle cx="212" cy="395" r="2"/><circle cx="697" cy="620" r="2"/><circle cx="145" cy="1110" r="3"/><circle cx="762" cy="1290" r="2"/><circle cx="344" cy="1440" r="3"/><circle cx="822" cy="857" r="3"/></g>
+  <g transform="translate(450 770)"><circle r="238" fill="none" stroke="#c2caff" stroke-opacity=".24" stroke-dasharray="5 19"/><ellipse rx="322" ry="120" transform="rotate(-32)" fill="none" stroke="#d2b9ff" stroke-opacity=".48" stroke-width="2"/><circle cx="45" cy="65" r="172" fill="url(#planet)"/><path d="M-70 20q55-50 110-5t130 10M-75 110q58-35 115-5t135 15" fill="none" stroke="#9ccefa" stroke-opacity=".4" stroke-width="22" stroke-linecap="round"/><circle cx="-244" cy="128" r="13" fill="#f6df78"/><path d="m185-204 8 22 22 8-22 8-8 22-8-22-22-8 22-8" fill="#fff0a6"/></g>
+  <text x="450" y="350" fill="#fff4a4" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700" font-size="43" letter-spacing="9">SUAREZSAT</text>
+  <text x="450" y="1190" fill="#e9efff" text-anchor="middle" font-family="Arial,sans-serif" font-size="25" letter-spacing="5">VÍDEO DE LA MISIÓN</text>
+</svg>
