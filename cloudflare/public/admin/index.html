@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Publicar avances · SuarezSat</title>
+  <link rel="icon" href="/admin/logo.png" type="image/png">
+  <link rel="stylesheet" href="/admin/panel.css">
+  <script src="/admin/panel.js" defer></script>
+</head>
+<body>
+  <header><a href="https://suarezsat.es">SUAREZSAT<span> / EQUIPO</span></a><a href="https://suarezsat.es/avances.html" target="_blank" rel="noopener">Ver el diario ↗</a></header>
+  <main>
+    <p class="eyebrow">BITÁCORA DE LA MISIÓN · EDICIÓN 02</p>
+    <h1>Cada día cuenta.</h1>
+    <p class="intro">Un espacio para compartir lo que construimos, probamos y aprendemos.</p>
+    <p id="status" role="status" aria-live="polite"></p>
+    <section id="login-section" class="panel">
+      <h2>Acceso del equipo</h2>
+      <p>Entra para publicar en el diario público de SuarezSat.</p>
+      <form id="login-form">
+        <label for="password">Clave del equipo</label>
+        <input id="password" type="password" autocomplete="current-password" required maxlength="200">
+        <button type="submit">Entrar al panel →</button>
+      </form>
+    </section>
+    <div id="editor-section" hidden>
+      <div class="editor-top"><p>Publicando para el <strong id="today"></strong> · Hora de España</p><button class="secondary" id="logout" type="button">Cerrar sesión</button></div>
+      <form id="entry-form" class="panel">
+        <h2>Nuevo avance</h2>
+        <p>Publica una nota, fotos, vídeos o una combinación. Todo aparecerá en el día de hoy.</p>
+        <label for="title">Título <span>(opcional)</span></label>
+        <input id="title" maxlength="160" placeholder="Por ejemplo: primeras pruebas del paracaídas">
+        <label for="body">Qué hemos hecho <span>(opcional)</span></label>
+        <textarea id="body" maxlength="10000" rows="6" placeholder="Cuenta el avance del día, una idea o lo que hemos aprendido…"></textarea>
+        <label for="files">Fotos y vídeos <span>(opcional)</span></label>
+        <p id="upload-help">Plan gratuito: hasta 12 archivos por publicación y 20 MB por archivo. JPG, PNG, WebP, GIF, MP4 o WebM. Para vídeos, recomendamos MP4 con códec H.264.</p>
+        <p id="storage-info" class="fine"></p>
+        <input id="files" type="file" multiple accept="image/jpeg,image/png,image/webp,image/gif,video/mp4,video/webm" aria-describedby="upload-help">
+        <div id="previews" class="previews"></div>
+        <progress id="upload-progress" max="100" value="0" hidden aria-label="Progreso de la subida"></progress>
+        <p id="publish-status" role="status" aria-live="polite"></p>
+        <button id="publish" type="submit">Publicar en Avances ↗</button>
+        <p class="fine">Al publicar, el contenido será visible para cualquier visitante de suarezsat.es.</p>
+      </form>
+      <section class="panel"><h2>Publicaciones del equipo</h2><p>Puedes retirar una publicación si contiene un error.</p><div id="entries"></div><button id="more" class="secondary" type="button" hidden>Ver publicaciones anteriores</button></section>
+    </div>
+  </main>
+  <footer>SuarezSat · IES Padre Suárez · Granada<br>Panel alojado en Cloudflare</footer>
+</body>
+</html>

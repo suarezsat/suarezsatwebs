@@ -68,3 +68,6 @@ if (
     .querySelectorAll("main > .section-light")
     .forEach((section) => arrivals.observe(section));
 }
+
+// data-current-copyright
+document.querySelectorAll("#year").forEach(node => { node.textContent = new Date().getFullYear(); });

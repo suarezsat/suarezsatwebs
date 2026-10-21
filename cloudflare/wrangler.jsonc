@@ -1,0 +1,14 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "suarezsat-avances",
+  "main": "src/worker.js",
+  "account_id": "c3303821318dad156da4d77ad4577be6",
+  "compatibility_date": "2026-10-21",
+  "workers_dev": true,
+  "assets": { "directory": "./public", "binding": "ASSETS", "run_worker_first": true },
+  "d1_databases": [
+    { "binding": "DB", "database_name": "suarezsat-avances", "database_id": "c15f62e3-144a-45a7-8949-9896af345a52", "migrations_dir": "migrations" }
+  ],
+  "kv_namespaces": [{ "binding": "MEDIA_KV", "id": "bfc597d533684637bd2d5d71aaae1d48" }],
+  "triggers": { "crons": ["0 4 * * *"] }
+}
