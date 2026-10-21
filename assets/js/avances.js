@@ -63,7 +63,7 @@
   function applyFilter() { feed.querySelectorAll('.diary-day').forEach(section => { section.hidden = Boolean(filter.value && section.dataset.month !== filter.value); }); }
   async function load() {
     if (loading) return;
-    loading = true; more.disabled = true; retry.hidden = true;
+    loading = true; more.disabled = true; retry.hidden = true; status.hidden = false;
     status.textContent = loaded ? 'Cargando más días…' : 'Abriendo la bitácora…';
     try {
       if (!config?.apiBase) throw new Error('API pendiente.');
@@ -74,9 +74,18 @@
       if (!response.ok) throw new Error('No se ha podido cargar el diario.');
       const data = await response.json(); data.entries.forEach(render); cursor = data.nextCursor; loaded = true; more.hidden = !cursor;
       count.textContent = `${seen.size} ${seen.size === 1 ? 'avance' : 'avances'} · ${days.size} ${days.size === 1 ? 'día' : 'días'}${cursor ? ' cargados' : ''}`;
-      status.textContent = seen.size ? 'Al día con nuestra misión. Las publicaciones más recientes aparecen primero.' : 'La bitácora está lista. Pronto compartiremos aquí nuestros primeros avances.'; applyFilter();
+      const hasEntries = seen.size > 0;
+      $('diary-toolbar').hidden = !hasEntries;
+      $('diary-filter').hidden = months.size < 2;
+      $('diary-empty').hidden = hasEntries;
+      $('diary-footnote').hidden = !hasEntries;
+      $('diary-actions').hidden = !cursor;
+      status.hidden = !hasEntries;
+      status.textContent = hasEntries ? 'Las publicaciones más recientes aparecen primero.' : '';
+      applyFilter();
     } catch {
       status.textContent = 'No hemos podido cargar los avances. Puedes volver a intentarlo en unos instantes.'; retry.hidden = false;
+      $('diary-empty').hidden = true; $('diary-actions').hidden = false;
     } finally { loading = false; more.disabled = false; }
   }
   filter.addEventListener('change', applyFilter); more.addEventListener('click', load); retry.addEventListener('click', load);

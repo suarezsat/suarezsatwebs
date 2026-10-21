@@ -9,13 +9,13 @@
   <link rel="stylesheet" href="assets/css/styles.css">
   <link rel="stylesheet" href="assets/css/refinement.css">
   <link rel="stylesheet" href="assets/css/space-play.css">
-  <link rel="stylesheet" href="assets/css/avances.css">
+  <link rel="stylesheet" href="assets/css/avances.css?v=20261021-2">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <script src="assets/js/site.js" defer></script>
   <script src="assets/js/avances-config.js" defer></script>
-  <script src="assets/js/avances.js" defer></script>
+  <script src="assets/js/avances.js?v=20261021-2" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main-content">Saltar al contenido</a>
@@ -25,18 +25,26 @@
       <span class="pill">Edición 02 · Diario de a bordo</span>
       <h1>Una misión enorme.<br><em>Un avance cada día.</em></h1>
       <p>Del primer boceto a las pruebas de vuelo. Aquí compartimos las fotos, los vídeos y las historias de quienes estamos construyendo SuarezSat.</p>
-      <p class="hero-note">Nuestra bitácora, contada por el equipo y ordenada por días.</p>
     </section>
     <div class="container diary-layout">
-      <div class="diary-toolbar">
+      <div class="diary-toolbar" id="diary-toolbar" hidden>
         <span class="diary-count" id="diary-count">BITÁCORA DE LA MISIÓN</span>
-        <div class="diary-filter"><label for="diary-month">Explorar por mes</label><select id="diary-month"><option value="">Todos los meses</option></select></div>
+        <div class="diary-filter" id="diary-filter" hidden><label for="diary-month">Explorar por mes</label><select id="diary-month"><option value="">Todos los meses</option></select></div>
       </div>
       <p id="diary-status" class="diary-status" role="status" aria-live="polite">Abriendo la bitácora…</p>
       <noscript><p>Activa JavaScript para consultar las fotos, los vídeos y las notas de nuestro diario.</p></noscript>
+      <section class="diary-empty" id="diary-empty" aria-labelledby="diary-empty-title" hidden>
+        <span class="diary-empty-symbol" aria-hidden="true">✦</span>
+        <div>
+          <span class="section-kicker">El próximo capítulo</span>
+          <h2 id="diary-empty-title">Nuestro diario despega pronto.</h2>
+          <p>Aquí reuniremos las fotos, los vídeos y las notas de cada jornada. El primer avance será el comienzo de nuestra bitácora.</p>
+          <a class="diary-empty-link" href="mission.html">Mientras tanto, descubre la misión <span aria-hidden="true">↗</span></a>
+        </div>
+      </section>
       <div id="diary-feed"></div>
-      <div class="diary-actions"><button class="btn btn-secondary" type="button" id="diary-retry" hidden>Volver a intentar</button><button class="btn btn-secondary" type="button" id="diary-more" hidden>Leer días anteriores ↓</button></div>
-      <p class="diary-footnote">Fechas y horas de España peninsular. Las publicaciones del equipo aparecen aquí cuando se publican.</p>
+      <div class="diary-actions" id="diary-actions" hidden><button class="btn btn-secondary" type="button" id="diary-retry" hidden>Volver a intentar</button><button class="btn btn-secondary" type="button" id="diary-more" hidden>Leer días anteriores ↓</button></div>
+      <p class="diary-footnote" id="diary-footnote" hidden>Fechas y horas de España peninsular.</p>
     </div>
   </main>
   <footer class="site-footer"><div class="container footer-grid"><div><a class="logo" href="index.html">SuarezSat<span class="brand-dot">.</span></a><p>Una misión pequeña.<br>Una ambición enorme.</p><span class="footer-location">IES Padre Suárez · Granada</span></div><div><h4 class="footer-title">Explora la misión</h4><a href="mission.html">Nuestro CanSat</a><a href="team.html">El equipo</a><a href="avances.html">Avances del proyecto</a><a href="multimedia.html">Multimedia</a></div><div><h4 class="footer-title">Forma parte</h4><a href="crowdfunding.html">Apoya el próximo despegue</a><a href="sponsors.html">Nuestros patrocinadores</a><a href="contact.html">Hablemos</a></div><div><h4 class="footer-title">Conecta con nosotros</h4><a href="mailto:suarezsatinfo@gmail.com">suarezsatinfo@gmail.com</a><a href="https://www.instagram.com/suarezsat_26/" target="_blank" rel="noopener noreferrer">Instagram ↗</a><a href="https://www.tiktok.com/@suarez_sat26" target="_blank" rel="noopener noreferrer">TikTok ↗</a></div></div><div class="container footer-bottom"><span>© <span id="year">2026</span> SuarezSat</span><span>Ciencia, tecnología y equipo.</span><a href="#main-content">Volver arriba ↑</a></div></footer>
